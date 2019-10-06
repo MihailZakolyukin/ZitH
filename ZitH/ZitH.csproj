@@ -42,9 +42,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Core.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -105,29 +108,33 @@
     </None>
     <None Include="app.manifest" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="Content\Ak47.png" />
-    <Content Include="Content\Axe.png" />
-    <Content Include="Content\Boris.png" />
-    <Content Include="Content\Boss.png" />
-    <Content Include="Content\Crowbow.png" />
-    <Content Include="Content\Dog.png" />
-    <Content Include="Content\Gas.png" />
-    <Content Include="Content\Grenade.png" />
-    <Content Include="Content\Key.png" />
-    <Content Include="Content\Knife.png" />
-    <Content Include="Content\Map.png" />
-    <Content Include="Content\Maxim.png" />
-    <Content Include="Content\Medkit.png" />
-    <Content Include="Content\Nadya.png" />
-    <Content Include="Content\Nastya.png" />
-    <Content Include="Content\Pistol.png" />
-    <Content Include="Content\RPG.png" />
-    <Content Include="Content\Sasha.png" />
-    <Content Include="Content\Shotgun.png" />
-    <Content Include="Content\Spider.png" />
-    <Content Include="Content\Wood.png" />
-    <Content Include="Content\Zombie.png" />
+    <Content Include="Content\img\Ak47.png" />
+    <Content Include="Content\img\Axe.png" />
+    <Content Include="Content\img\Boris.png" />
+    <Content Include="Content\img\Boss.png" />
+    <Content Include="Content\img\Crowbow.png" />
+    <Content Include="Content\img\Dog.png" />
+    <Content Include="Content\img\exit.png" />
+    <Content Include="Content\img\Gas.png" />
+    <Content Include="Content\img\Grenade.png" />
+    <Content Include="Content\img\Key.png" />
+    <Content Include="Content\img\Knife.png" />
+    <Content Include="Content\img\Map.png" />
+    <Content Include="Content\img\Maxim.png" />
+    <Content Include="Content\img\Medkit.png" />
+    <Content Include="Content\img\Nadya.png" />
+    <Content Include="Content\img\Nastya.png" />
+    <Content Include="Content\img\Pistol.png" />
+    <Content Include="Content\img\play.png" />
+    <Content Include="Content\img\RPG.png" />
+    <Content Include="Content\img\Sasha.png" />
+    <Content Include="Content\img\settings.png" />
+    <Content Include="Content\img\Shotgun.png" />
+    <Content Include="Content\img\Spider.png" />
+    <Content Include="Content\img\Wood.png" />
+    <Content Include="Content\img\Zombie.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
