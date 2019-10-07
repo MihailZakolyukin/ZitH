@@ -13,9 +13,9 @@ namespace ZitH
         public Rectangle settingRec;
         public Rectangle exitRec;
         public Graph(){
-            playRec = new Rectangle(500, 87 * 2, 255, 66);
-            settingRec = new Rectangle(500, 87 * 3, 255, 66);
-            exitRec = new Rectangle(500, 87 * 4, 255, 66);
+            playRec = new Rectangle(1920/2-201, 1080/2-200-95, 402, 95);
+            settingRec = new Rectangle(1920/2-201, 1080/2-95, 402, 95);
+            exitRec = new Rectangle(1920/2-201, 1080/2+200-95, 402, 95);
         }
     }
 }

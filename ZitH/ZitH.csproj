@@ -124,6 +124,7 @@
     <Content Include="Content\img\Map.png" />
     <Content Include="Content\img\Maxim.png" />
     <Content Include="Content\img\Medkit.png" />
+    <Content Include="Content\img\menuBg.jpg" />
     <Content Include="Content\img\Nadya.png" />
     <Content Include="Content\img\Nastya.png" />
     <Content Include="Content\img\Pistol.png" />

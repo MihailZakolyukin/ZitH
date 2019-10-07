@@ -43,6 +43,7 @@ namespace ZitH
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Load();
         }
 
         protected override void UnloadContent()
@@ -61,21 +62,27 @@ namespace ZitH
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-
-            base.Draw(gameTime);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+            switch (scen)
+            {
+                case 0:
+                    //DrawGame();
+                    break;
+                case 1:
+                    DrawMenu();
+                    break;
+            }
         }
 
         private void Load()
         {
-            play = Content.Load<Texture2D>("play");
-            settings = Content.Load<Texture2D>("settings");
-            exit = Content.Load<Texture2D>("exit");
-            menuBg = Content.Load<Texture2D>("menuBg");
+            play = Content.Load<Texture2D>("img/play");
+            settings = Content.Load<Texture2D>("img/settings");
+            exit = Content.Load<Texture2D>("img/exit");
+            menuBg = Content.Load<Texture2D>("img/menuBg");
         }
 
-        void DrawMenu()
-        {
+        void DrawMenu(){
             GraphicsDevice.Clear(Color.DarkGray);
             spriteBatch.Begin();
             spriteBatch.Draw(menuBg, new Vector2(0, 0), Color.White);
@@ -89,25 +96,8 @@ namespace ZitH
                     core.ui.MenuButtons();
                     break;
                 //Settings menu
-                //case 1:
-                //   if (debuggingMode == true)
-                //    {
-                //        spriteBatch.Draw(disableDebug, core.ui.graphics.disableRec, Color.White);
-                //    }
-                //    else
-                //    {
-                //       spriteBatch.Draw(debug, core.ui.graphics.debugRec, Color.White);
-                //    }
-                //    spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
-                //    if (debuggingMode == true && menuScene == 1)
-                //    {
-                //        core.ui.DisableButton();
-                //   }
-                //    else
-                //    {
-                //        core.ui.SettingsButtons();
-                //    }
-                //    break;
+                case 1:          
+                    break;
             }
             spriteBatch.End();
         }

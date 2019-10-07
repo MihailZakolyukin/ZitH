@@ -181,6 +181,18 @@
 /processorParam:TextureFormat=Color
 /build:img/Medkit.png
 
+#begin img/menuBg.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/menuBg.jpg
+
 #begin img/Nadya.png
 /importer:TextureImporter
 /processor:TextureProcessor
