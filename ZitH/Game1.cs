@@ -15,7 +15,7 @@ namespace ZitH
         Core core = new Core();
 
         public static MouseState mouse = Mouse.GetState();
-        public static MouseState mouse2 = Mouse.GetState();
+        //public static MouseState mouse2 = Mouse.GetState();
 
         public static int scen = 1;
         public static int menuScene = 0;
@@ -34,8 +34,9 @@ namespace ZitH
         {
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
             graphics.ApplyChanges();
+            IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -96,7 +97,8 @@ namespace ZitH
                     core.ui.MenuButtons();
                     break;
                 //Settings menu
-                case 1:          
+                case 1:
+                    spriteBatch.Draw(exit, core.ui.graphics.exitRec, Color.White);
                     break;
             }
             spriteBatch.End();
