@@ -21,7 +21,7 @@ namespace ZitH
         public static int menuScene = 0;
         public static bool exitGame = false;
 
-        Texture2D play, settings, exit, menuBg, Map;
+        Texture2D play, settings, exit, menuBg, gameBg, Map;
 
         public Game1()
         {
@@ -84,6 +84,7 @@ namespace ZitH
             settings = Content.Load<Texture2D>("img/settings");
             exit = Content.Load<Texture2D>("img/exit");
             menuBg = Content.Load<Texture2D>("img/menuBg");
+            gameBg = Content.Load<Texture2D>("img/gameBg");
             Map = Content.Load<Texture2D>("img/Map");
         }
 
@@ -114,6 +115,7 @@ namespace ZitH
             GraphicsDevice.Clear(Color.White);
 
             spriteBatch.Begin();
+            spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
             spriteBatch.End();
         }

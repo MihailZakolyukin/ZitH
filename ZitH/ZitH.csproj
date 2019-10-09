@@ -117,6 +117,7 @@
     <Content Include="Content\img\Crowbow.png" />
     <Content Include="Content\img\Dog.png" />
     <Content Include="Content\img\exit.png" />
+    <Content Include="Content\img\gameBg.jpg" />
     <Content Include="Content\img\Gas.png" />
     <Content Include="Content\img\Grenade.png" />
     <Content Include="Content\img\Key.png" />
