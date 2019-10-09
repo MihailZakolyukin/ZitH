@@ -35,7 +35,7 @@ namespace ZitH
 
         public bool Mouseclick()
         {
-            if (Game1.mouse.LeftButton == ButtonState.Pressed && Game1.mouse.LeftButton == ButtonState.Released)
+            if (Game1.mouse.LeftButton == ButtonState.Pressed && Game1.mouse2.LeftButton == ButtonState.Released)
             {
                 return true;
             }

@@ -15,13 +15,13 @@ namespace ZitH
         Core core = new Core();
 
         public static MouseState mouse = Mouse.GetState();
-        //public static MouseState mouse2 = Mouse.GetState();
+        public static MouseState mouse2 = Mouse.GetState();
 
-        public static int scen = 1;
+        public static int scen = 0; //1
         public static int menuScene = 0;
         public static bool exitGame = false;
 
-        Texture2D play, settings, exit, menuBg;
+        Texture2D play, settings, exit, menuBg, Map;
 
         public Game1()
         {
@@ -34,7 +34,7 @@ namespace ZitH
         {
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             IsMouseVisible = true;
 
@@ -57,17 +57,20 @@ namespace ZitH
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            if (exitGame)
+            {
+                Exit();
+            }
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            GraphicsDevice.Clear(Color.CornflowerBlue);
             switch (scen)
             {
                 case 0:
-                    //DrawGame();
+                    DrawGame();
                     break;
                 case 1:
                     DrawMenu();
@@ -81,9 +84,11 @@ namespace ZitH
             settings = Content.Load<Texture2D>("img/settings");
             exit = Content.Load<Texture2D>("img/exit");
             menuBg = Content.Load<Texture2D>("img/menuBg");
+            Map = Content.Load<Texture2D>("img/Map");
         }
 
-        void DrawMenu(){
+        void DrawMenu()
+        {
             GraphicsDevice.Clear(Color.DarkGray);
             spriteBatch.Begin();
             spriteBatch.Draw(menuBg, new Vector2(0, 0), Color.White);
@@ -102,6 +107,21 @@ namespace ZitH
                     break;
             }
             spriteBatch.End();
+        }
+
+        void DrawGame()
+        {
+            GraphicsDevice.Clear(Color.White);
+
+            spriteBatch.Begin();
+            spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
+            spriteBatch.End();
+        }
+
+        public void MouseUpdate()
+        {
+            mouse = mouse2;
+            mouse = Mouse.GetState();
         }
     }
 }
