@@ -21,7 +21,15 @@ namespace ZitH
         public static int menuScene = 0;
         public static bool exitGame = false;
 
-        Texture2D play, settings, exit, menuBg, gameBg, Map;
+        public static string fullscreenon = "img/fullscreenon";
+        public static string fullscreenoff = "img/fullscreenoff";
+        public static string fullscreenURL = "img/fullscreenoff";
+
+        public static bool isfullscreen = true;
+
+        Texture2D play, settings, exit, fullscreen, back, //Buttons
+            menuBg, gameBg, //Backgrounds
+            Map;
 
         public Game1()
         {
@@ -34,7 +42,7 @@ namespace ZitH
         {
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = isfullscreen;
             graphics.ApplyChanges();
             IsMouseVisible = true;
 
@@ -53,7 +61,7 @@ namespace ZitH
         }
 
         protected override void Update(GameTime gameTime)
-        {
+        {           
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             MouseUpdate();
@@ -85,6 +93,8 @@ namespace ZitH
             exit = Content.Load<Texture2D>("img/exit");
             menuBg = Content.Load<Texture2D>("img/menuBg");
             gameBg = Content.Load<Texture2D>("img/gameBg");
+            fullscreen = Content.Load<Texture2D>(fullscreenURL);
+            back = Content.Load<Texture2D>("img/back");
             Map = Content.Load<Texture2D>("img/Map");
         }
 
@@ -104,7 +114,9 @@ namespace ZitH
                     break;
                 //Settings menu
                 case 1:
-                    spriteBatch.Draw(exit, core.ui.graphics.exitRec, Color.White);
+                    spriteBatch.Draw(fullscreen, core.ui.graphics.fullscreenRec, Color.White);
+                    spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
+                    core.ui.SettingsButtons();
                     break;
             }
             spriteBatch.End();

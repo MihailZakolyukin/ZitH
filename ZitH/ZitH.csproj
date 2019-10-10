@@ -112,11 +112,14 @@
   <ItemGroup>
     <Content Include="Content\img\Ak47.png" />
     <Content Include="Content\img\Axe.png" />
+    <Content Include="Content\img\back.png" />
     <Content Include="Content\img\Boris.png" />
     <Content Include="Content\img\Boss.png" />
     <Content Include="Content\img\Crowbow.png" />
     <Content Include="Content\img\Dog.png" />
     <Content Include="Content\img\exit.png" />
+    <Content Include="Content\img\fullscreenoff.png" />
+    <Content Include="Content\img\fullscreenon.png" />
     <Content Include="Content\img\gameBg.jpg" />
     <Content Include="Content\img\Gas.png" />
     <Content Include="Content\img\Grenade.png" />
