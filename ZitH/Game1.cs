@@ -17,7 +17,7 @@ namespace ZitH
         public static MouseState mouse = Mouse.GetState();
         public static MouseState mouse2 = Mouse.GetState();
 
-        public static int scen = 0; //1
+        public static int scen = 1; 
         public static int menuScene = 0;
         public static bool exitGame = false;
 
@@ -56,7 +56,7 @@ namespace ZitH
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            MouseUpdate();
             if (exitGame)
             {
                 Exit();
