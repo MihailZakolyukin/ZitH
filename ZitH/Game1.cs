@@ -19,6 +19,7 @@ namespace ZitH
 
         public static int scen = 1; 
         public static int menuScene = 0;
+        public static bool EscButton = false;
         public static bool exitGame = false;
 
         public static string fullscreenon = "img/fullscreenon";
@@ -27,8 +28,8 @@ namespace ZitH
 
         public static bool isfullscreen = true;
 
-        Texture2D play, settings, exit, fullscreen, back, //Buttons
-            menuBg, gameBg, //Backgrounds
+        Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
+            menuBg, gameBg, opaqueBg, //Backgrounds
             Map;
 
         public Game1()
@@ -61,9 +62,10 @@ namespace ZitH
         }
 
         protected override void Update(GameTime gameTime)
-        {           
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+        {
+            if (scen == 0 && Keyboard.GetState().IsKeyDown(Keys.Escape))
+                EscButton = true;
+
             MouseUpdate();
             if (exitGame)
             {
@@ -91,10 +93,13 @@ namespace ZitH
             play = Content.Load<Texture2D>("img/play");
             settings = Content.Load<Texture2D>("img/settings");
             exit = Content.Load<Texture2D>("img/exit");
+            back = Content.Load<Texture2D>("img/back");
+            exittomm = Content.Load<Texture2D>("img/exittomm");
+            exitfromgame = Content.Load<Texture2D>("img/exitfromgame");
             menuBg = Content.Load<Texture2D>("img/menuBg");
             gameBg = Content.Load<Texture2D>("img/gameBg");
+            opaqueBg = Content.Load<Texture2D>("img/opaqueBg");
             fullscreen = Content.Load<Texture2D>(fullscreenURL);
-            back = Content.Load<Texture2D>("img/back");
             Map = Content.Load<Texture2D>("img/Map");
         }
 
@@ -117,7 +122,7 @@ namespace ZitH
                     spriteBatch.Draw(fullscreen, core.ui.graphics.fullscreenRec, Color.White);
                     spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
                     core.ui.SettingsButtons();
-                    break;
+                    break;  
             }
             spriteBatch.End();
         }
@@ -129,6 +134,16 @@ namespace ZitH
             spriteBatch.Begin();
             spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
+
+            if (EscButton)
+            {
+                spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                spriteBatch.Draw(exittomm, core.ui.graphics.exittommRec, Color.White);
+                spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
+                spriteBatch.Draw(exitfromgame, core.ui.graphics.exitfromgameRec, Color.White);
+                core.ui.EscMenuButtons();
+            }
+
             spriteBatch.End();
         }
 

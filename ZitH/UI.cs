@@ -56,6 +56,26 @@ namespace ZitH
             }  
         }
 
+        public void EscMenuButtons()
+        {
+
+                if (Mouseclick() && RecChecker(graphics.exittommRec))
+                {
+                    Game1.scen = 1;
+                    Game1.menuScene = 0;
+                }
+
+                if (Mouseclick() && RecChecker(graphics.backRec))
+                {
+                Game1.scen = 0;
+                }
+
+            if (Mouseclick() && RecChecker(graphics.exitfromgameRec))
+                {
+                    Game1.exitGame = true;
+                }
+        }
+
         public bool Mouseclick()
         {
             if (Game1.mouse.LeftButton == ButtonState.Pressed && Game1.mouse2.LeftButton == ButtonState.Released)
