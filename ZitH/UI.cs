@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ZitH
 {
@@ -67,7 +68,7 @@ namespace ZitH
 
                 if (Mouseclick() && RecChecker(graphics.backRec))
                 {
-                Game1.scen = 0;
+                    //need to add something 
                 }
 
             if (Mouseclick() && RecChecker(graphics.exitfromgameRec))

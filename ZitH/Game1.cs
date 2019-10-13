@@ -30,7 +30,10 @@ namespace ZitH
 
         Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
-            Map;
+            Boris, Maxim, Nadya, Nastya, Sasha, //Humans
+            Boss, Dog, Spider, Zombie, //Enemies
+            Ak47, Axe, Crowbow, Gas, Grenade, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
+            Map; //Map
 
         public Game1()
         {
@@ -96,10 +99,37 @@ namespace ZitH
             back = Content.Load<Texture2D>("img/back");
             exittomm = Content.Load<Texture2D>("img/exittomm");
             exitfromgame = Content.Load<Texture2D>("img/exitfromgame");
+
             menuBg = Content.Load<Texture2D>("img/menuBg");
             gameBg = Content.Load<Texture2D>("img/gameBg");
             opaqueBg = Content.Load<Texture2D>("img/opaqueBg");
+
+            Boris = Content.Load<Texture2D>("img/Boris");
+            Maxim = Content.Load<Texture2D>("img/Maxim");
+            Nadya = Content.Load<Texture2D>("img/Nadya");
+            Nastya = Content.Load<Texture2D>("img/Nastya");
+            Sasha = Content.Load<Texture2D>("img/Sasha");
+
+            Boss = Content.Load<Texture2D>("img/Boss");
+            Dog = Content.Load<Texture2D>("img/Dog");
+            Spider = Content.Load<Texture2D>("img/Spider");
+            Zombie = Content.Load<Texture2D>("img/Zombie");
+
+            Ak47 = Content.Load<Texture2D>("img/Ak47");
+            Axe = Content.Load<Texture2D>("img/Axe");
+            Crowbow = Content.Load<Texture2D>("img/Crowbow");
+            Gas = Content.Load<Texture2D>("img/Gas");
+            Grenade = Content.Load<Texture2D>("img/Grenade");
+            Key = Content.Load<Texture2D>("img/Key");
+            Knife = Content.Load<Texture2D>("img/Knife");
+            Medkit = Content.Load<Texture2D>("img/Medkit");
+            Pistol = Content.Load<Texture2D>("img/Pistol");
+            RPG = Content.Load<Texture2D>("img/RPG");
+            Shotgun = Content.Load<Texture2D>("img/Shotgun");
+            Wood = Content.Load<Texture2D>("img/Wood");
+
             fullscreen = Content.Load<Texture2D>(fullscreenURL);
+
             Map = Content.Load<Texture2D>("img/Map");
         }
 
@@ -130,7 +160,6 @@ namespace ZitH
         void DrawGame()
         {
             GraphicsDevice.Clear(Color.White);
-
             spriteBatch.Begin();
             spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
