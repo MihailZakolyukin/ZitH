@@ -28,12 +28,13 @@ namespace ZitH
 
         public static bool isfullscreen = true;
 
-        Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
+        private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
             Map; //Map
+        private Vector2 position;
 
         public Game1()
         {
@@ -56,6 +57,8 @@ namespace ZitH
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            position = new Vector2(0, 0);
             Load();
         }
 
@@ -74,6 +77,24 @@ namespace ZitH
             {
                 Exit();
             }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                position.Y -= 51;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.A) || Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                position.X -= 51;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                position.Y += 51;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                position.X += 51;
+            }
+
             base.Update(gameTime);
         }
 
@@ -163,6 +184,7 @@ namespace ZitH
             spriteBatch.Begin();
             spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
+            spriteBatch.Draw(Boris, position, Color.White);
 
             if (EscButton)
             {
@@ -178,7 +200,7 @@ namespace ZitH
 
         public void MouseUpdate()
         {
-            mouse = mouse2;
+            mouse2 = mouse;
             mouse = Mouse.GetState();
         }
     }
