@@ -20,8 +20,12 @@ namespace ZitH
         public static KeyboardState Keyboardstate = Keyboard.GetState();
         public static KeyboardState Keyboardstate2 = Keyboard.GetState();     
 
+        public static KeyboardState EscButtonState = Keyboard.GetState();
+        public static KeyboardState EscButtonState2 = Keyboard.GetState();
+
         public static int scen = 1; 
         public static int menuScene = 0;
+        public static int gameScene = 0;
         public static bool EscButton = false;
         public static bool exitGame = false;
 
@@ -72,8 +76,11 @@ namespace ZitH
 
         protected override void Update(GameTime gameTime)
         {
-            if (scen == 0 && Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (scen == 0 && EscButtonState.IsKeyDown(Keys.Escape) && EscButtonState2.IsKeyUp(Keys.Escape))
+            {
                 EscButton = true;
+            }
+            else { EscButton = false; }
 
             MouseUpdate();
             KeyboardUpdate();
@@ -191,13 +198,19 @@ namespace ZitH
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
             spriteBatch.Draw(Boris, position, Color.White);
 
-            if (EscButton)
+            if (EscButton) gameScene = 1;
+
+            switch (gameScene)
             {
-                spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                spriteBatch.Draw(exittomm, core.ui.graphics.exittommRec, Color.White);
-                spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
-                spriteBatch.Draw(exitfromgame, core.ui.graphics.exitfromgameRec, Color.White);
-                core.ui.EscMenuButtons();
+                case 0:
+                    break;
+                case 1:
+                    spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(exittomm, core.ui.graphics.exittommRec, Color.White);
+                    spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
+                    spriteBatch.Draw(exitfromgame, core.ui.graphics.exitfromgameRec, Color.White);
+                    core.ui.EscMenuButtons();
+                    break;
             }
 
             spriteBatch.End();
@@ -211,6 +224,8 @@ namespace ZitH
 
         public void KeyboardUpdate()
         {
+            EscButtonState2 = EscButtonState;
+            EscButtonState = Keyboard.GetState();
             Keyboardstate2 = Keyboardstate;
             Keyboardstate = Keyboard.GetState();
         }

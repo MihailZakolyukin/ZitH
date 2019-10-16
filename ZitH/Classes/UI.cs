@@ -68,7 +68,7 @@ namespace ZitH
 
                 if (Mouseclick() && RecChecker(graphics.backRec))
                 {
-                    //need to add something 
+                    Game1.gameScene = 0;
                 }
 
             if (Mouseclick() && RecChecker(graphics.exitfromgameRec))

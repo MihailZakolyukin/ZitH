@@ -23,7 +23,7 @@ namespace ZitH
             exitRec = new Rectangle(1920/2-201, 1080/2+200-95, 402, 95);
             backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);
             mapRec = new Rectangle(1920/2-795/2, 1080/2-795/2, 795, 795);
-            fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);
+            fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             exittommRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             exitfromgameRec = new Rectangle(1920 / 2 - 201, 1080 / 2 + 200 - 95, 402, 95);
         }
