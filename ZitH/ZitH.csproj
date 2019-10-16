@@ -120,6 +120,7 @@
     <Content Include="Content\img\Ak47.png" />
     <Content Include="Content\img\Axe.png" />
     <Content Include="Content\img\back.png" />
+    <Content Include="Content\img\BackSide.png" />
     <Content Include="Content\img\Boris.png" />
     <Content Include="Content\img\Boss.png" />
     <Content Include="Content\img\Crowbow.png" />

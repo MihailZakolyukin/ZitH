@@ -17,6 +17,9 @@ namespace ZitH
         public static MouseState mouse = Mouse.GetState();
         public static MouseState mouse2 = Mouse.GetState();
 
+        public static KeyboardState Keyboardstate = Keyboard.GetState();
+        public static KeyboardState Keyboardstate2 = Keyboard.GetState();     
+
         public static int scen = 1; 
         public static int menuScene = 0;
         public static bool EscButton = false;
@@ -58,7 +61,7 @@ namespace ZitH
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            position = new Vector2(0, 0);
+            position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 , 1080 / 2 + 264);
             Load();
         }
 
@@ -73,26 +76,28 @@ namespace ZitH
                 EscButton = true;
 
             MouseUpdate();
+            KeyboardUpdate();
+            
             if (exitGame)
             {
                 Exit();
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.Up))
+            if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up))
             {
-                position.Y -= 51;
+                position.Y -= 52;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.A) || Keyboard.GetState().IsKeyDown(Keys.Left))
+            if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left))
             {
-                position.X -= 51;
+                position.X -= 52;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.Down))
+            if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down))
             {
-                position.Y += 51;
+                position.Y += 52;
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.Right))
+            if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right))
             {
-                position.X += 51;
+                position.X += 52;
             }
 
             base.Update(gameTime);
@@ -202,6 +207,12 @@ namespace ZitH
         {
             mouse2 = mouse;
             mouse = Mouse.GetState();
+        }
+
+        public void KeyboardUpdate()
+        {
+            Keyboardstate2 = Keyboardstate;
+            Keyboardstate = Keyboard.GetState();
         }
     }
 }
