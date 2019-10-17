@@ -33,7 +33,7 @@ namespace ZitH
         public static string fullscreenoff = "img/fullscreenoff";
         public static string fullscreenURL = "img/fullscreenoff";
 
-        public static bool isfullscreen = true;
+        public static bool isfullscreen = false; //true
 
         private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
@@ -66,6 +66,7 @@ namespace ZitH
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 , 1080 / 2 + 264);
+
             Load();
         }
 
