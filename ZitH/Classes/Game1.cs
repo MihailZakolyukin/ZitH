@@ -33,7 +33,7 @@ namespace ZitH
         public static string fullscreenoff = "img/fullscreenoff";
         public static string fullscreenURL = "img/fullscreenoff";
 
-        public static bool isfullscreen = false; //true
+        public static bool isfullscreen = true;
 
         private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
@@ -84,31 +84,33 @@ namespace ZitH
             else { EscButton = false; }
 
             MouseUpdate();
-            KeyboardUpdate();
             
             if (exitGame)
             {
                 Exit();
             }
 
-            if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up))
-            {
-                position.Y -= 52;
-            }
-            if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left))
-            {
-                position.X -= 52;
-            }
-            if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down))
-            {
-                position.Y += 52;
-            }
-            if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right))
-            {
-                position.X += 52;
-            }
+            if (EscButton == false) {
+                KeyboardUpdate();
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up))
+                {
+                    position.Y -= 52;
+                }
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left))
+                {
+                    position.X -= 52;
+                }
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down))
+                {
+                    position.Y += 52;
+                }
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right))
+                {
+                    position.X += 52;
+                }
 
-            base.Update(gameTime);
+                base.Update(gameTime);
+            }
         }
 
         protected override void Draw(GameTime gameTime)
