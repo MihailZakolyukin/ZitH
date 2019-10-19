@@ -108,7 +108,6 @@ namespace ZitH
                 {
                     position.X += 52;
                 }
-
                 base.Update(gameTime);
             }
         }
