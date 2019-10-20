@@ -65,8 +65,7 @@ namespace ZitH
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 , 1080 / 2 + 264);
-
+            Positions();
             Load();
         }
 
@@ -84,14 +83,13 @@ namespace ZitH
             else { EscButton = false; }
 
             MouseUpdate();
-            
+            KeyboardUpdate();
+
             if (exitGame)
             {
                 Exit();
             }
 
-            if (EscButton == false) {
-                KeyboardUpdate();
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up))
                 {
                     position.Y -= 52;
@@ -108,8 +106,8 @@ namespace ZitH
                 {
                     position.X += 52;
                 }
+
                 base.Update(gameTime);
-            }
         }
 
         protected override void Draw(GameTime gameTime)
@@ -168,6 +166,11 @@ namespace ZitH
             Map = Content.Load<Texture2D>("img/Map");
         }
 
+        private void Positions()
+        {
+            position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+        }
+
         void DrawMenu()
         {
             GraphicsDevice.Clear(Color.DarkGray);
@@ -205,6 +208,12 @@ namespace ZitH
             switch (gameScene)
             {
                 case 0:
+                    spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(Boris, core.ui.graphics.BorisRec, Color.White);
+                    spriteBatch.Draw(Maxim, core.ui.graphics.MaximRec, Color.White);
+                    spriteBatch.Draw(Nadya, core.ui.graphics.NadyaRec, Color.White);
+                    spriteBatch.Draw(Nastya, core.ui.graphics.NastyaRec, Color.White);
+                    spriteBatch.Draw(Sasha, core.ui.graphics.SashaRec, Color.White);
                     break;
                 case 1:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
@@ -212,6 +221,8 @@ namespace ZitH
                     spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
                     spriteBatch.Draw(exitfromgame, core.ui.graphics.exitfromgameRec, Color.White);
                     core.ui.EscMenuButtons();
+                    break;
+                case 2:
                     break;
             }
 

@@ -57,6 +57,34 @@ namespace ZitH
             }  
         }
 
+        public void CardSelection()
+        {
+            if (Mouseclick() && RecChecker(graphics.BorisRec))
+            {
+
+            }
+
+            if (Mouseclick() && RecChecker(graphics.MaximRec))
+            {
+
+            }
+
+            if (Mouseclick() && RecChecker(graphics.NadyaRec))
+            {
+
+            }
+
+            if (Mouseclick() && RecChecker(graphics.NastyaRec))
+            {
+
+            }
+
+            if (Mouseclick() && RecChecker(graphics.SashaRec))
+            {
+
+            }
+        }
+
         public void EscMenuButtons()
         {
 
@@ -68,7 +96,7 @@ namespace ZitH
 
                 if (Mouseclick() && RecChecker(graphics.backRec))
                 {
-                    Game1.gameScene = 0;
+                    Game1.gameScene = 2;
                 }
 
             if (Mouseclick() && RecChecker(graphics.exitfromgameRec))
