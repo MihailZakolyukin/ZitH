@@ -29,17 +29,17 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        public static string fullscreenon = "img/fullscreenon";
-        public static string fullscreenoff = "img/fullscreenoff";
-        public static string fullscreenURL = "img/fullscreenoff";
+        //public static string fullscreenon = "img/fullscreenon";
+        //public static string fullscreenoff = "img/fullscreenoff";
+        //public static string fullscreenURL = "img/fullscreenoff";
 
         public static bool isfullscreen = true;
 
-        private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, //Buttons
+        private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, gameStart, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
             Boss, Dog, Spider, Zombie, //Enemies
-            Ak47, Axe, Crowbow, Gas, Grenade, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
+            Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
             Map; //Map
         private Vector2 position;
 
@@ -130,6 +130,7 @@ namespace ZitH
             settings = Content.Load<Texture2D>("img/settings");
             exit = Content.Load<Texture2D>("img/exit");
             back = Content.Load<Texture2D>("img/back");
+            gameStart = Content.Load<Texture2D>("img/GameStart");
             exittomm = Content.Load<Texture2D>("img/exittomm");
             exitfromgame = Content.Load<Texture2D>("img/exitfromgame");
 
@@ -153,6 +154,7 @@ namespace ZitH
             Crowbow = Content.Load<Texture2D>("img/Crowbow");
             Gas = Content.Load<Texture2D>("img/Gas");
             Grenade = Content.Load<Texture2D>("img/Grenade");
+            HP = Content.Load<Texture2D>("img/HP");
             Key = Content.Load<Texture2D>("img/Key");
             Knife = Content.Load<Texture2D>("img/Knife");
             Medkit = Content.Load<Texture2D>("img/Medkit");
@@ -161,7 +163,7 @@ namespace ZitH
             Shotgun = Content.Load<Texture2D>("img/Shotgun");
             Wood = Content.Load<Texture2D>("img/Wood");
 
-            fullscreen = Content.Load<Texture2D>(fullscreenURL);
+            //fullscreen = Content.Load<Texture2D>(fullscreenURL);
 
             Map = Content.Load<Texture2D>("img/Map");
         }
@@ -187,7 +189,7 @@ namespace ZitH
                     break;
                 //Settings menu
                 case 1:
-                    spriteBatch.Draw(fullscreen, core.ui.graphics.fullscreenRec, Color.White);
+                    //spriteBatch.Draw(fullscreen, core.ui.graphics.fullscreenRec, Color.White);
                     spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
                     core.ui.SettingsButtons();
                     break;  
@@ -209,6 +211,7 @@ namespace ZitH
             {
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White);
                     spriteBatch.Draw(Boris, core.ui.graphics.BorisRec, Color.White);
                     spriteBatch.Draw(Maxim, core.ui.graphics.MaximRec, Color.White);
                     spriteBatch.Draw(Nadya, core.ui.graphics.NadyaRec, Color.White);

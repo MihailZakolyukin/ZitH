@@ -36,20 +36,20 @@ namespace ZitH
 
         public void SettingsButtons()
         {
-            if (Mouseclick() && RecChecker(graphics.fullscreenRec))
-            {
-                if (Game1.isfullscreen == true)
-                {
-                    Game1.isfullscreen = false;
-                    Game1.fullscreenURL = Game1.fullscreenon;
-                }
-
-                if (Game1.isfullscreen == false)
-                {
-                    Game1.isfullscreen = true;
-                    Game1.fullscreenURL = Game1.fullscreenoff;
-                }
-            }
+            //if (Mouseclick() && RecChecker(graphics.fullscreenRec))
+            //{
+            //    if (Game1.isfullscreen == true)
+            //    {
+            //        Game1.isfullscreen = false;
+            //        Game1.fullscreenURL = Game1.fullscreenon;
+            //    }
+            //
+            //    if (Game1.isfullscreen == false)
+            //    {
+            //        Game1.isfullscreen = true;
+            //        Game1.fullscreenURL = Game1.fullscreenoff;
+            //    }
+            //}
 
             if (Mouseclick() && RecChecker(graphics.backRec))
             {
@@ -61,7 +61,7 @@ namespace ZitH
         {
             if (Mouseclick() && RecChecker(graphics.BorisRec))
             {
-
+                    
             }
 
             if (Mouseclick() && RecChecker(graphics.MaximRec))
@@ -83,6 +83,12 @@ namespace ZitH
             {
 
             }
+
+            if (Mouseclick() && RecChecker(graphics.GameStartRec))
+            {
+                Game1.gameScene = 2;
+            }
+
         }
 
         public void EscMenuButtons()
@@ -95,8 +101,8 @@ namespace ZitH
                 }
 
                 if (Mouseclick() && RecChecker(graphics.backRec))
-                {
-                    Game1.gameScene = 2;
+                {  
+                        Game1.gameScene = 2;
                 }
 
             if (Mouseclick() && RecChecker(graphics.exitfromgameRec))

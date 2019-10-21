@@ -12,14 +12,15 @@ namespace ZitH
         public Rectangle playRec;
         public Rectangle settingRec;
         public Rectangle exitRec;
+        //public Rectangle fullscreenRec;
+        public Rectangle backRec;  
         public Rectangle BorisRec;
         public Rectangle MaximRec;
         public Rectangle NadyaRec;
         public Rectangle NastyaRec;
-        public Rectangle SashaRec;
-        public Rectangle fullscreenRec;
-        public Rectangle backRec;
+        public Rectangle SashaRec; 
         public Rectangle mapRec;
+        public Rectangle GameStartRec;
         public Rectangle exittommRec;
         public Rectangle exitfromgameRec;
         public Graph(){
@@ -27,17 +28,22 @@ namespace ZitH
             settingRec = new Rectangle(1920/2-201, 1080/2-95, 402, 95);
             exitRec = new Rectangle(1920/2-201, 1080/2+200-95, 402, 95);
 
+            //fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
+            backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);
+
             BorisRec = new Rectangle(1920 / 2 + 612 - 102, 1080 / 2 - 204, 204, 204);
             MaximRec = new Rectangle(1920 / 2 + 306 - 102, 1080 / 2 - 204, 204, 204);
             NadyaRec = new Rectangle(1920 / 2 - 102, 1080 / 2 - 204, 204, 204);
             NastyaRec = new Rectangle(1920 / 2 - 306 - 102, 1080 / 2 - 204, 204, 204);
             SashaRec = new Rectangle(1920 / 2 - 612 - 102, 1080 / 2 - 204, 204, 204);
     
-            backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);
             mapRec = new Rectangle(1920/2-795/2, 1080/2-795/2, 795, 795);
-            fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
+
+            GameStartRec = new Rectangle(1920 / 2 - 171/2 + 400, 1080 / 2 -50 + 400, 171, 50);
+
             exittommRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             exitfromgameRec = new Rectangle(1920 / 2 - 201, 1080 / 2 + 200 - 95, 402, 95);
+
         }
     }
 }

@@ -133,6 +133,7 @@
     <Content Include="Content\img\fullscreenoff.png" />
     <Content Include="Content\img\fullscreenon.png" />
     <Content Include="Content\img\gameBg.jpg" />
+    <Content Include="Content\img\GameStart.png" />
     <Content Include="Content\img\Gas.png" />
     <Content Include="Content\img\Grenade.png" />
     <Content Include="Content\img\Key.png" />
@@ -153,6 +154,7 @@
     <Content Include="Content\img\Spider.png" />
     <Content Include="Content\img\Wood.png" />
     <Content Include="Content\img\Zombie.png" />
+    <Content Include="Content\img\HP.png" />
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\Icon1.ico" />
     <Content Include="x86\icon.ico" />
