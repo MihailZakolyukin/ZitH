@@ -211,12 +211,41 @@ namespace ZitH
             {
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White);
+                    spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White); 
                     spriteBatch.Draw(Boris, core.ui.graphics.BorisRec, Color.White);
                     spriteBatch.Draw(Maxim, core.ui.graphics.MaximRec, Color.White);
                     spriteBatch.Draw(Nadya, core.ui.graphics.NadyaRec, Color.White);
                     spriteBatch.Draw(Nastya, core.ui.graphics.NastyaRec, Color.White);
                     spriteBatch.Draw(Sasha, core.ui.graphics.SashaRec, Color.White);
+
+                    //Boris HP
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36, 1080 / 2 -275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37 - 37 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    //Maxim HP
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 306 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 306 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 306 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    //Nadya HP
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    //Hastya HP
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 306 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 306 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 306 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    //Sasha HP
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    core.ui.CardSelection();
                     break;
                 case 1:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
