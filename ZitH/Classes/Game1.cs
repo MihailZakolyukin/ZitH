@@ -38,6 +38,7 @@ namespace ZitH
         private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, gameStart, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
+            BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
             Map; //Map
@@ -144,6 +145,12 @@ namespace ZitH
             Nastya = Content.Load<Texture2D>("img/Nastya");
             Sasha = Content.Load<Texture2D>("img/Sasha");
 
+            BorisHD = Content.Load<Texture2D>("img/BorisHD");
+            MaximHD = Content.Load<Texture2D>("img/MaxHD");
+            NadyaHD = Content.Load<Texture2D>("img/NadyaHD");
+            NastyaHD = Content.Load<Texture2D>("img/NastyaHD");
+            SashaHD = Content.Load<Texture2D>("img/SashaHD");
+
             Boss = Content.Load<Texture2D>("img/Boss");
             Dog = Content.Load<Texture2D>("img/Dog");
             Spider = Content.Load<Texture2D>("img/Spider");
@@ -212,11 +219,11 @@ namespace ZitH
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White); 
-                    spriteBatch.Draw(Boris, core.ui.graphics.BorisRec, Color.White);
-                    spriteBatch.Draw(Maxim, core.ui.graphics.MaximRec, Color.White);
-                    spriteBatch.Draw(Nadya, core.ui.graphics.NadyaRec, Color.White);
-                    spriteBatch.Draw(Nastya, core.ui.graphics.NastyaRec, Color.White);
-                    spriteBatch.Draw(Sasha, core.ui.graphics.SashaRec, Color.White);
+                    spriteBatch.Draw(BorisHD, core.ui.graphics.BorisRec, Color.White);
+                    spriteBatch.Draw(MaximHD, core.ui.graphics.MaximRec, Color.White);
+                    spriteBatch.Draw(NadyaHD, core.ui.graphics.NadyaRec, Color.White);
+                    spriteBatch.Draw(NastyaHD, core.ui.graphics.NastyaRec, Color.White);
+                    spriteBatch.Draw(SashaHD, core.ui.graphics.SashaRec, Color.White);
 
                     //Boris HP
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36, 1080 / 2 -275 + 33), Color.White);
