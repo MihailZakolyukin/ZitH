@@ -35,12 +35,13 @@ namespace ZitH
 
         public static bool isfullscreen = true;
 
-        private Texture2D play, settings, exit, fullscreen, back, exittomm, exitfromgame, gameStart, //Buttons
+        private Texture2D play, settings, exit, /*fullscreen,*/ back, exittomm, exitfromgame, gameStart, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
+            Aim, RunImg, Sabre, Teeth, //Events
             Map; //Map
         private Vector2 position;
 
@@ -171,6 +172,11 @@ namespace ZitH
             Wood = Content.Load<Texture2D>("img/Wood");
 
             //fullscreen = Content.Load<Texture2D>(fullscreenURL);
+
+            Aim = Content.Load<Texture2D>("img/Aim");
+            RunImg = Content.Load<Texture2D>("img/Run");
+            Sabre = Content.Load<Texture2D>("img/Sabre");
+            Teeth = Content.Load<Texture2D>("img/Teeth");
 
             Map = Content.Load<Texture2D>("img/Map");
         }
