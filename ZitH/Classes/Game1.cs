@@ -41,6 +41,7 @@ namespace ZitH
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
+            KnifeHD, MedkitHD, PistolHD, //Items HD
             Aim, RunImg, Sabre, Teeth, //Events
             Map; //Map
         private Vector2 position;
