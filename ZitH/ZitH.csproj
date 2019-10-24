@@ -140,10 +140,12 @@
     <Content Include="Content\img\Grenade.png" />
     <Content Include="Content\img\Key.png" />
     <Content Include="Content\img\Knife.png" />
+    <Content Include="Content\img\KnifeHD.png" />
     <Content Include="Content\img\Map.png" />
     <Content Include="Content\img\MaxHD.png" />
     <Content Include="Content\img\Maxim.png" />
     <Content Include="Content\img\Medkit.png" />
+    <Content Include="Content\img\MedkitHD.png" />
     <Content Include="Content\img\menuBg.jpg" />
     <Content Include="Content\img\Nadya.png" />
     <Content Include="Content\img\NadyaHD.png" />
@@ -151,9 +153,12 @@
     <Content Include="Content\img\NastyaHD.png" />
     <Content Include="Content\img\opaqueBg.png" />
     <Content Include="Content\img\Pistol.png" />
+    <Content Include="Content\img\PistolHD.png" />
     <Content Include="Content\img\play.png" />
+    <Content Include="Content\img\Plus.png" />
     <Content Include="Content\img\RPG.png" />
     <Content Include="Content\img\Run.png" />
+    <Content Include="Content\img\RunSmall.png" />
     <Content Include="Content\img\Sabre.png" />
     <Content Include="Content\img\Sasha.png" />
     <Content Include="Content\img\SashaHD.png" />

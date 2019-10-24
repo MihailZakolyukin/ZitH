@@ -41,7 +41,7 @@ namespace ZitH
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
-            KnifeHD, MedkitHD, PistolHD, //Items HD
+            KnifeHD, MedkitHD, PistolHD, RunSmall, /*Plus,*/ //Items HD
             Aim, RunImg, Sabre, Teeth, //Events
             Map; //Map
         private Vector2 position;
@@ -178,6 +178,8 @@ namespace ZitH
             RunImg = Content.Load<Texture2D>("img/Run");
             Sabre = Content.Load<Texture2D>("img/Sabre");
             Teeth = Content.Load<Texture2D>("img/Teeth");
+            RunSmall = Content.Load<Texture2D>("img/RunSmall");
+            //Plus = Content.Load<Texture2D>("img/Plus");
 
             Map = Content.Load<Texture2D>("img/Map");
         }
@@ -258,6 +260,15 @@ namespace ZitH
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 - 612 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
+
+                    //Humans features
+                    spriteBatch.Draw(Knife, new Vector2(1920 / 2 - 612 - 51 + 20, 1080 / 2 + 51 - 30), Color.White);
+                    spriteBatch.Draw(Medkit, new Vector2(1920 / 2 - 306 - 51 + 20, 1080 / 2 + 51 - 30), Color.White);
+                    //spriteBatch.Draw(Medkit, new Vector2(1920 / 2 - 306 - 51 - 30, 1080 / 2 + 51 - 30), Color.White);
+                    //spriteBatch.Draw(Plus, new Vector2(1920 / 2 - 306 - 30, 1080 / 2 + 6), Color.White);
+                    //spriteBatch.Draw(HP, new Vector2(1920 / 2 - 306 + 80 - 30, 1080 / 2 + 30), Color.White);
+                    spriteBatch.Draw(Pistol, new Vector2(1920 / 2 - 102 + 51 + 20, 1080 / 2 + 51 - 30), Color.White);
+                    spriteBatch.Draw(RunSmall, new Vector2(1920 / 2 + 306 + 51 - 90, 1080 / 2 + 51 - 30), Color.White);
 
                     core.ui.CardSelection();
                     break;
