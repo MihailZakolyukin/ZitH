@@ -21,6 +21,8 @@ namespace ZitH
         public Rectangle SashaRec; 
         public Rectangle mapRec;
         public Rectangle GameStartRec;
+        public Rectangle NextTurnRec;
+        public Rectangle ThrowRec;
         public Rectangle exittommRec;
         public Rectangle exitfromgameRec;
         public Graph(){
@@ -40,6 +42,10 @@ namespace ZitH
             mapRec = new Rectangle(1920/2-795/2, 1080/2-795/2, 795, 795);
 
             GameStartRec = new Rectangle(1920 / 2 - 171/2 + 400, 1080 / 2 -50 + 400, 171, 50);
+
+            NextTurnRec = new Rectangle(1920 / 2 - 171 / 2 + 550, 1080 / 2 - 50 + 380, 171, 50);
+
+            ThrowRec = new Rectangle(1920 / 2 - 171 / 2 - 500, 1080 / 2 - 50 + 300, 171, 50);
 
             exittommRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             exitfromgameRec = new Rectangle(1920 / 2 - 201, 1080 / 2 + 200 - 95, 402, 95);

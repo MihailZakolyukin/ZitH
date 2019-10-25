@@ -409,6 +409,18 @@
 /processorParam:TextureFormat=Color
 /build:img/NastyaHD.png
 
+#begin img/NextTurn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/NextTurn.png
+
 #begin img/opaqueBg.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -480,18 +492,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:img/RPG.png
-
-#begin img/Run.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:img/Run.png
 
 #begin img/Run.png
 /importer:TextureImporter
@@ -600,6 +600,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:img/Teeth.png
+
+#begin img/Throw.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:img/Throw.png
 
 #begin img/Wood.png
 /importer:TextureImporter

@@ -61,27 +61,27 @@ namespace ZitH
         {
             if (Mouseclick() && RecChecker(graphics.BorisRec))
             {
-                    
+                Game1.isBorisSelected = true;
             }
 
             if (Mouseclick() && RecChecker(graphics.MaximRec))
             {
-
+                Game1.isMaximSelected = true;
             }
 
             if (Mouseclick() && RecChecker(graphics.NadyaRec))
             {
-
+                Game1.isNadyaSelected = true;
             }
 
             if (Mouseclick() && RecChecker(graphics.NastyaRec))
             {
-
+                Game1.isNastyaSelected = true;
             }
 
             if (Mouseclick() && RecChecker(graphics.SashaRec))
             {
-
+                Game1.isSashaSelected = true;
             }
 
             if (Mouseclick() && RecChecker(graphics.GameStartRec))

@@ -35,7 +35,13 @@ namespace ZitH
 
         public static bool isfullscreen = true;
 
-        private Texture2D play, settings, exit, /*fullscreen,*/ back, exittomm, exitfromgame, gameStart, //Buttons
+        public static bool isBorisSelected = false;
+        public static bool isMaximSelected = false;
+        public static bool isNadyaSelected = false;
+        public static bool isNastyaSelected = false;
+        public static bool isSashaSelected = false;
+
+        private Texture2D play, settings, exit, /*fullscreen,*/ back, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
@@ -44,7 +50,7 @@ namespace ZitH
             KnifeHD, MedkitHD, PistolHD, RunSmall, /*Plus,*/ //Items HD
             Aim, RunImg, Sabre, Teeth, //Events
             Map; //Map
-        private Vector2 position;
+        private Vector2 position, position1, position2, position3, position4, position5;
 
         public Game1()
         {
@@ -134,6 +140,8 @@ namespace ZitH
             exit = Content.Load<Texture2D>("img/exit");
             back = Content.Load<Texture2D>("img/back");
             gameStart = Content.Load<Texture2D>("img/GameStart");
+            NextTurn = Content.Load<Texture2D>("img/NextTurn");
+            Throw = Content.Load<Texture2D>("img/Throw");
             exittomm = Content.Load<Texture2D>("img/exittomm");
             exitfromgame = Content.Load<Texture2D>("img/exitfromgame");
 
@@ -187,6 +195,11 @@ namespace ZitH
         private void Positions()
         {
             position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+            position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+            position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
+            position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
+            position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 -52);
+            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 +104, 1080 / 2 + 264);
         }
 
         void DrawMenu()
@@ -219,8 +232,13 @@ namespace ZitH
             spriteBatch.Begin();
             spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
-            spriteBatch.Draw(Boris, position, Color.White);
-
+            spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
+            spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
+            if (isBorisSelected) spriteBatch.Draw(Boris, position, Color.White);
+            if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
+            if (isNadyaSelected) spriteBatch.Draw(Nadya, position3, Color.White);
+            if (isNastyaSelected) spriteBatch.Draw(Nastya, position4, Color.White);
+            if (isSashaSelected) spriteBatch.Draw(Sasha, position5, Color.White);
             if (EscButton) gameScene = 1;
 
             switch (gameScene)

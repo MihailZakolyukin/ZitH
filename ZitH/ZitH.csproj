@@ -151,6 +151,7 @@
     <Content Include="Content\img\NadyaHD.png" />
     <Content Include="Content\img\Nastya.png" />
     <Content Include="Content\img\NastyaHD.png" />
+    <Content Include="Content\img\NextTurn.png" />
     <Content Include="Content\img\opaqueBg.png" />
     <Content Include="Content\img\Pistol.png" />
     <Content Include="Content\img\PistolHD.png" />
@@ -166,6 +167,7 @@
     <Content Include="Content\img\Shotgun.png" />
     <Content Include="Content\img\Spider.png" />
     <Content Include="Content\img\Teeth.png" />
+    <Content Include="Content\img\Throw.png" />
     <Content Include="Content\img\Wood.png" />
     <Content Include="Content\img\Zombie.png" />
     <Content Include="Content\img\HP.png" />
