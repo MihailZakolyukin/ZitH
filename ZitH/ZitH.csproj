@@ -152,6 +152,10 @@
     <Content Include="Content\img\Nastya.png" />
     <Content Include="Content\img\NastyaHD.png" />
     <Content Include="Content\img\NextTurn.png" />
+    <Content Include="Content\img\Number1.png" />
+    <Content Include="Content\img\Number2.png" />
+    <Content Include="Content\img\Number3.png" />
+    <Content Include="Content\img\Number4.png" />
     <Content Include="Content\img\opaqueBg.png" />
     <Content Include="Content\img\Pistol.png" />
     <Content Include="Content\img\PistolHD.png" />

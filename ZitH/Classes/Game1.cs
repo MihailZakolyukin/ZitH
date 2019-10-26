@@ -41,7 +41,13 @@ namespace ZitH
         public static bool isNastyaSelected = false;
         public static bool isSashaSelected = false;
 
+        public static bool isNumber1 = false;
+        public static bool isNumber2 = false;
+        public static bool isNumber3 = false;
+        public static bool isNumber4 = false;
+
         private Texture2D play, settings, exit, /*fullscreen,*/ back, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
+            Number1, Number2, Number3, Number4, //Numbers
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
@@ -145,6 +151,11 @@ namespace ZitH
             exittomm = Content.Load<Texture2D>("img/exittomm");
             exitfromgame = Content.Load<Texture2D>("img/exitfromgame");
 
+            Number1 = Content.Load<Texture2D>("img/Number1");
+            Number2 = Content.Load<Texture2D>("img/Number2");
+            Number3 = Content.Load<Texture2D>("img/Number3");
+            Number4 = Content.Load<Texture2D>("img/Number4");
+
             menuBg = Content.Load<Texture2D>("img/menuBg");
             gameBg = Content.Load<Texture2D>("img/gameBg");
             opaqueBg = Content.Load<Texture2D>("img/opaqueBg");
@@ -239,8 +250,29 @@ namespace ZitH
             if (isNadyaSelected) spriteBatch.Draw(Nadya, position3, Color.White);
             if (isNastyaSelected) spriteBatch.Draw(Nastya, position4, Color.White);
             if (isSashaSelected) spriteBatch.Draw(Sasha, position5, Color.White);
+            if (isNumber1)
+            {
+                spriteBatch.Draw(Number1, core.ui.graphics.ThrowNumberRec, Color.White);
+                spriteBatch.Draw(RunImg, core.ui.graphics.EventRec, Color.White);
+            }
+            if (isNumber2)
+            {
+                spriteBatch.Draw(Number2, core.ui.graphics.ThrowNumberRec, Color.White);
+                spriteBatch.Draw(Teeth, core.ui.graphics.EventRec, Color.White);
+            }
+            if (isNumber3)
+            {
+                spriteBatch.Draw(Number3, core.ui.graphics.ThrowNumberRec, Color.White);
+                spriteBatch.Draw(Sabre, core.ui.graphics.EventRec, Color.White);
+            }
+            if (isNumber4)
+            {
+                spriteBatch.Draw(Number4, core.ui.graphics.ThrowNumberRec, Color.White);
+                spriteBatch.Draw(Aim, core.ui.graphics.EventRec, Color.White);
+            }
             if (EscButton) gameScene = 1;
 
+            core.ui.GameButtons();
             switch (gameScene)
             {
                 case 0:

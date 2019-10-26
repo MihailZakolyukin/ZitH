@@ -34,6 +34,49 @@ namespace ZitH
             }
         }
 
+        public void GameButtons()
+        {
+            Random random = new Random();
+            int tmp;
+            if (Mouseclick() && RecChecker(graphics.ThrowRec))
+            {
+                tmp = random.Next(1, 5);
+
+                switch (tmp)
+                {
+                    case 1:
+                        Game1.isNumber1 = true;
+                        Game1.isNumber2 = false;
+                        Game1.isNumber3 = false;
+                        Game1.isNumber4 = false;
+                        break;
+                    case 2:
+                        Game1.isNumber1 = false;
+                        Game1.isNumber2 = true;
+                        Game1.isNumber3 = false;
+                        Game1.isNumber4 = false;
+                        break;
+                    case 3:
+                        Game1.isNumber1 = false;
+                        Game1.isNumber2 = false;
+                        Game1.isNumber3 = true;
+                        Game1.isNumber4 = false;
+                        break;
+                    case 4:
+                        Game1.isNumber1 = false;
+                        Game1.isNumber2 = false;
+                        Game1.isNumber3 = false;
+                        Game1.isNumber4 = true;
+                        break;
+                    //default:;
+                }
+            }
+            if (Mouseclick() && RecChecker(graphics.NextTurnRec))
+            {
+                
+            }
+        }
+
         public void SettingsButtons()
         {
             //if (Mouseclick() && RecChecker(graphics.fullscreenRec))
