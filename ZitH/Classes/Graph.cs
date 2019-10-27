@@ -32,8 +32,8 @@ namespace ZitH
             settingRec = new Rectangle(1920/2-201, 1080/2-95, 402, 95);
             exitRec = new Rectangle(1920/2-201, 1080/2+200-95, 402, 95);
 
-            EventRec = new Rectangle(1920 / 2 + 50, 1080 / 2 - 100, 100, 100);
-            ThrowNumberRec = new Rectangle(1920 / 2 - 50, 1080 / 2 - 100, 100, 100);
+            EventRec = new Rectangle(1920 / 2 + 50 - 800, 1080 / 2 - 100 + 300, 100, 100);
+            ThrowNumberRec = new Rectangle(1920 / 2 - 50 - 850, 1080 / 2 - 100 + 300, 100, 100);
 
             //fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);

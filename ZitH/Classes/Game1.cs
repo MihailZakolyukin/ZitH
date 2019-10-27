@@ -205,7 +205,7 @@ namespace ZitH
 
         private void Positions()
         {
-            position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+            //position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
             position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
             position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
             position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
@@ -245,7 +245,7 @@ namespace ZitH
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
             spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
             spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
-            if (isBorisSelected) spriteBatch.Draw(Boris, position, Color.White);
+            if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
             if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
             if (isNadyaSelected) spriteBatch.Draw(Nadya, position3, Color.White);
             if (isNastyaSelected) spriteBatch.Draw(Nastya, position4, Color.White);
