@@ -41,15 +41,23 @@ namespace ZitH
         public static bool isNastyaSelected = false;
         public static bool isSashaSelected = false;
 
+        public static bool BorisTurn = false;
+        public static bool MaximTurn = false;
+        public static bool NadyaTurn = false;
+        public static bool NastyaTurn = false;
+        public static bool SashaTurn = false;
+
         public static bool isNumber1 = false;
         public static bool isNumber2 = false;
         public static bool isNumber3 = false;
         public static bool isNumber4 = false;
 
-        private Texture2D play, settings, exit, /*fullscreen,*/ back, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
+        private SpriteFont font;
+
+        private Texture2D play, settings, exit, /*fullscreen,*/ back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
             Number1, Number2, Number3, Number4, //Numbers
             menuBg, gameBg, opaqueBg, //Backgrounds
-            Boris, Maxim, Nadya, Nastya, Sasha, //Humans
+            Boris, Maxim, Nadya, Nastya, Sasha, //Humans    
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
@@ -105,24 +113,46 @@ namespace ZitH
                 Exit();
             }
 
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up))
-                {
-                    position.Y -= 52;
-                }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left))
-                {
-                    position.X -= 52;
-                }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down))
-                {
-                    position.Y += 52;
-                }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right))
-                {
-                    position.X += 52;
-                }
+            if (BorisTurn) {
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up)) position1.Y -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left)) position1.X -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down)) position1.Y += 52;
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right)) position1.X += 52;
+            }
 
-                base.Update(gameTime);
+            if (MaximTurn)
+            {
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up)) position2.Y -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left)) position2.X -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down)) position2.Y += 52;
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right)) position2.X += 52;
+            }
+
+            if (NadyaTurn)
+            {
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up)) position3.Y -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left)) position3.X -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down)) position3.Y += 52;
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right)) position3.X += 52;
+            }
+
+            if (NastyaTurn)
+            {
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up)) position4.Y -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left)) position4.X -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down)) position4.Y += 52;
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right)) position4.X += 52;
+            }
+
+            if (SashaTurn)
+            {
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up)) position5.Y -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left)) position5.X -= 52;
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down)) position5.Y += 52;
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right)) position5.X += 52;
+            }
+
+            base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
@@ -141,10 +171,13 @@ namespace ZitH
 
         private void Load()
         {
+            font = Content.Load<SpriteFont>("ArielFont");
+
             play = Content.Load<Texture2D>("img/play");
             settings = Content.Load<Texture2D>("img/settings");
             exit = Content.Load<Texture2D>("img/exit");
             back = Content.Load<Texture2D>("img/back");
+            ok = Content.Load<Texture2D>("img/ok");
             gameStart = Content.Load<Texture2D>("img/GameStart");
             NextTurn = Content.Load<Texture2D>("img/NextTurn");
             Throw = Content.Load<Texture2D>("img/Throw");
@@ -241,15 +274,18 @@ namespace ZitH
         {
             GraphicsDevice.Clear(Color.White);
             spriteBatch.Begin();
+
             spriteBatch.Draw(gameBg, new Vector2(0, 0), Color.White);
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
             spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
             spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
+
             if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
             if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
             if (isNadyaSelected) spriteBatch.Draw(Nadya, position3, Color.White);
             if (isNastyaSelected) spriteBatch.Draw(Nastya, position4, Color.White);
             if (isSashaSelected) spriteBatch.Draw(Sasha, position5, Color.White);
+
             if (isNumber1)
             {
                 spriteBatch.Draw(Number1, core.ui.graphics.ThrowNumberRec, Color.White);
@@ -270,6 +306,7 @@ namespace ZitH
                 spriteBatch.Draw(Number4, core.ui.graphics.ThrowNumberRec, Color.White);
                 spriteBatch.Draw(Aim, core.ui.graphics.EventRec, Color.White);
             }
+
             if (EscButton) gameScene = 1;
 
             core.ui.GameButtons();
@@ -330,6 +367,40 @@ namespace ZitH
                     core.ui.EscMenuButtons();
                     break;
                 case 2:
+                    break;
+                case 3:
+                    if (BorisTurn)
+                    {
+                        spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                        spriteBatch.DrawString(font, "Boris's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
+                    }
+                    if (MaximTurn)
+                    {
+                        spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                        spriteBatch.DrawString(font, "Maxim's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
+                    }
+                    if (NadyaTurn)
+                    {
+                        spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                        spriteBatch.DrawString(font, "Nadya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
+                    }
+                    if (NastyaTurn)
+                    {
+                        spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                        spriteBatch.DrawString(font, "Nastya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
+                    }
+                    if (SashaTurn)
+                    {
+                        spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                        spriteBatch.DrawString(font, "Sasha's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
+                    }
+
+                    core.ui.TurnButton();
                     break;
             }
 

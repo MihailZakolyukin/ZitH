@@ -156,6 +156,7 @@
     <Content Include="Content\img\Number2.png" />
     <Content Include="Content\img\Number3.png" />
     <Content Include="Content\img\Number4.png" />
+    <Content Include="Content\img\ok.png" />
     <Content Include="Content\img\opaqueBg.png" />
     <Content Include="Content\img\Pistol.png" />
     <Content Include="Content\img\PistolHD.png" />

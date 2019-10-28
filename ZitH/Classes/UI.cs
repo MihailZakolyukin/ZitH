@@ -12,6 +12,7 @@ namespace ZitH
     public class UI
     {
         public Graph graphics = new Graph();
+        Random random = new Random();
 
         public UI()
         {
@@ -36,7 +37,6 @@ namespace ZitH
 
         public void GameButtons()
         {
-            Random random = new Random();
             int tmp;
             if (Mouseclick() && RecChecker(graphics.ThrowRec))
             {
@@ -68,12 +68,21 @@ namespace ZitH
                         Game1.isNumber3 = false;
                         Game1.isNumber4 = true;
                         break;
-                    //default:;
+                        //default:;
                 }
             }
             if (Mouseclick() && RecChecker(graphics.NextTurnRec))
             {
-                
+                if (Game1.isBorisSelected) Game1.BorisTurn = true;
+                Game1.gameScene = 3;
+            }    
+        }
+
+        public void TurnButton()
+        {
+            if (Mouseclick() && RecChecker(graphics.OkRec))
+            {
+                Game1.gameScene = 2;
             }
         }
 
