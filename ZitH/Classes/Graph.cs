@@ -36,7 +36,7 @@ namespace ZitH
             EventRec = new Rectangle(1920 / 2 + 50 - 800, 1080 / 2 - 100 + 300, 100, 100);
             ThrowNumberRec = new Rectangle(1920 / 2 - 50 - 850, 1080 / 2 - 100 + 300, 100, 100);
 
-            OkRec = new Rectangle(1920 / 2 - 171 / 2, 1080 / 2 - 50 - 300, 171, 50);
+            OkRec = new Rectangle(1920 / 2 - 171 / 2, 1080 / 2 - 50 + 300, 171, 50);
 
             //fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);

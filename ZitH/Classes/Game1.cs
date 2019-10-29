@@ -372,7 +372,7 @@ namespace ZitH
                     if (BorisTurn)
                     {
                         spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                        spriteBatch.DrawString(font, "Boris's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.DrawString(font, "Boris's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }
                     if (MaximTurn)
