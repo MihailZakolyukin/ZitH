@@ -378,25 +378,25 @@ namespace ZitH
                     if (MaximTurn)
                     {
                         spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                        spriteBatch.DrawString(font, "Maxim's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.DrawString(font, "Maxim's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }
                     if (NadyaTurn)
                     {
                         spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                        spriteBatch.DrawString(font, "Nadya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.DrawString(font, "Nadya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }
                     if (NastyaTurn)
                     {
                         spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                        spriteBatch.DrawString(font, "Nastya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.DrawString(font, "Nastya's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }
                     if (SashaTurn)
                     {
                         spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                        spriteBatch.DrawString(font, "Sasha's turn", new Vector2(1920 / 2 - 100, 1080 / 2 + 100), Color.Yellow);
+                        spriteBatch.DrawString(font, "Sasha's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }
 
@@ -419,6 +419,6 @@ namespace ZitH
             EscButtonState = Keyboard.GetState();
             Keyboardstate2 = Keyboardstate;
             Keyboardstate = Keyboard.GetState();
-        }
+        }   
     }
 }
