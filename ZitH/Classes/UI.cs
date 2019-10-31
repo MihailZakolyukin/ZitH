@@ -73,8 +73,10 @@ namespace ZitH
             }
             if (Mouseclick() && RecChecker(graphics.NextTurnRec))
             {
-                Game1.gameScene = 3;
-
+                if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false)
+                {
+                    Game1.BorisTurn = true;
+                }
                 //Next after Boris
                 if (Game1.BorisTurn && Game1.isMaximSelected)
                 {
@@ -183,7 +185,9 @@ namespace ZitH
                 {
                     Game1.SashaTurn = false;
                     Game1.NastyaTurn = true;
-                }  
+                }
+
+                Game1.gameScene = 3;
             }    
         }
 
