@@ -19,7 +19,7 @@ namespace ZitH
             graphics = new Graph();
         }
 
-        public void MenuButtons()
+        public void MenuButtons() //Menu buttons (Play, Settings, Exit)
         {
             if (Mouseclick() && RecChecker(graphics.playRec))
             {
@@ -35,7 +35,7 @@ namespace ZitH
             }
         }
 
-        public void GameButtons()
+        public void GameButtons() //Game buttons (Trow, Next turn)
         {
             int tmp;
             if (Mouseclick() && RecChecker(graphics.ThrowRec))
@@ -191,7 +191,7 @@ namespace ZitH
             }    
         }
 
-        public void TurnButton()
+        public void TurnButton() //Button Ok in next turn menu
         {
             if (Mouseclick() && RecChecker(graphics.OkRec))
             {
@@ -199,7 +199,7 @@ namespace ZitH
             }
         }
 
-        public void SettingsButtons()
+        public void SettingsButtons() //Settings buttons ("fullscreen", back)
         {
             //if (Mouseclick() && RecChecker(graphics.fullscreenRec))
             //{
@@ -222,7 +222,7 @@ namespace ZitH
             }  
         }
 
-        public void CardSelection()
+        public void CardSelection() //Selection menu (Boris, Maxim, Nadya, Nastya, Sasha, Start Game)
         {
             if (Mouseclick() && RecChecker(graphics.BorisRec))
             {
@@ -256,7 +256,7 @@ namespace ZitH
 
         }
 
-        public void EscMenuButtons()
+        public void EscMenuButtons() //Esc menu buttons (Exit to the main menu, Back, Exit from the game)
         {
 
                 if (Mouseclick() && RecChecker(graphics.exittommRec))
@@ -276,7 +276,7 @@ namespace ZitH
                 }
         }
 
-        public bool Mouseclick()
+        public bool Mouseclick() //Mouseclick logic
         {
             if (Game1.mouse.LeftButton == ButtonState.Pressed && Game1.mouse2.LeftButton == ButtonState.Released)
             {
@@ -288,7 +288,7 @@ namespace ZitH
             }
         }
 
-        public bool RecChecker(Rectangle a)
+        public bool RecChecker(Rectangle a) //RecChecker logic
         {
             if (a.Contains(Game1.mouse.Position))
             {
