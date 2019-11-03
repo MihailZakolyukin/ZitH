@@ -329,6 +329,9 @@ namespace ZitH
             position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
             position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 -52);
             position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 +104, 1080 / 2 + 264);
+
+            //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 -52*11 + 264); //Top left corner
+            //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52*11, 1080 / 2 + 264); //Bottom right corner
         }
 
         void DrawMenu() //Drawing Menu

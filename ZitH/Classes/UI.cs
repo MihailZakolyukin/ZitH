@@ -77,6 +77,7 @@ namespace ZitH
                 {
                     Game1.BorisTurn = true;
                 }
+
                 //Next after Boris
                 if (Game1.BorisTurn && Game1.isMaximSelected)
                 {
