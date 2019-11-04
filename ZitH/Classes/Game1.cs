@@ -18,12 +18,12 @@ namespace ZitH
         public static MouseState mouse2 = Mouse.GetState();
 
         public static KeyboardState Keyboardstate = Keyboard.GetState();
-        public static KeyboardState Keyboardstate2 = Keyboard.GetState();     
+        public static KeyboardState Keyboardstate2 = Keyboard.GetState();
 
         public static KeyboardState EscButtonState = Keyboard.GetState();
         public static KeyboardState EscButtonState2 = Keyboard.GetState();
 
-        public static int scen = 1; 
+        public static int scen = 1;
         public static int menuScene = 0;
         public static int gameScene = 0;
         public static int move = 0;
@@ -117,22 +117,22 @@ namespace ZitH
             //Moving---------------------------------------------
 
             if (BorisTurn) {
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move>=0)
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
                     position1.Y -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
                     position1.X -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
                     position1.Y += 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
                     position1.X += 52;
@@ -141,22 +141,22 @@ namespace ZitH
 
             if (MaximTurn)
             {
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
                     position2.Y -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
                     position2.X -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
                     position2.Y += 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
                     position2.X += 52;
@@ -165,22 +165,22 @@ namespace ZitH
 
             if (NadyaTurn)
             {
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
                     position3.Y -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
                     position3.X -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
                     position3.Y += 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
                     position3.X += 52;
@@ -189,22 +189,22 @@ namespace ZitH
 
             if (NastyaTurn)
             {
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
                     position4.Y -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
                     position4.X -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
                     position4.Y += 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
                     position4.X += 52;
@@ -213,22 +213,22 @@ namespace ZitH
 
             if (SashaTurn)
             {
-                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
                     position5.Y -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
                     position5.X -= 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
                     position5.Y += 52;
                 }
-                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 0 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 0)
+                if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
                     position5.X += 52;
@@ -327,8 +327,8 @@ namespace ZitH
             position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
             position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
             position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
-            position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 -52);
-            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 +104, 1080 / 2 + 264);
+            position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
+            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);
 
             //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 -52*11 + 264); //Top left corner
             //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52*11, 1080 / 2 + 264); //Bottom right corner
@@ -353,7 +353,7 @@ namespace ZitH
                     //spriteBatch.Draw(fullscreen, core.ui.graphics.fullscreenRec, Color.White);
                     spriteBatch.Draw(back, core.ui.graphics.backRec, Color.White);
                     core.ui.SettingsButtons();
-                    break;  
+                    break;
             }
             spriteBatch.End();
         }
@@ -378,25 +378,21 @@ namespace ZitH
             {
                 spriteBatch.Draw(Number1, core.ui.graphics.ThrowNumberRec, Color.White);
                 spriteBatch.Draw(RunImg, core.ui.graphics.EventRec, Color.White);
-                move = 1;
             }
             if (isNumber2)
             {
                 spriteBatch.Draw(Number2, core.ui.graphics.ThrowNumberRec, Color.White);
                 spriteBatch.Draw(Teeth, core.ui.graphics.EventRec, Color.White);
-                move = 2;
             }
             if (isNumber3)
             {
                 spriteBatch.Draw(Number3, core.ui.graphics.ThrowNumberRec, Color.White);
                 spriteBatch.Draw(Sabre, core.ui.graphics.EventRec, Color.White);
-                move = 3;
             }
             if (isNumber4)
             {
                 spriteBatch.Draw(Number4, core.ui.graphics.ThrowNumberRec, Color.White);
                 spriteBatch.Draw(Aim, core.ui.graphics.EventRec, Color.White);
-                move = 4;
             }
 
             if (EscButton) gameScene = 1;
@@ -406,7 +402,7 @@ namespace ZitH
             {
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White); 
+                    spriteBatch.Draw(gameStart, core.ui.graphics.GameStartRec, Color.White);
                     spriteBatch.Draw(BorisHD, core.ui.graphics.BorisRec, Color.White);
                     spriteBatch.Draw(MaximHD, core.ui.graphics.MaximRec, Color.White);
                     spriteBatch.Draw(NadyaHD, core.ui.graphics.NadyaRec, Color.White);
@@ -414,7 +410,7 @@ namespace ZitH
                     spriteBatch.Draw(SashaHD, core.ui.graphics.SashaRec, Color.White);
 
                     //Boris HP
-                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36, 1080 / 2 -275 + 33), Color.White);
+                    spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36, 1080 / 2 - 275 + 33), Color.White);
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37, 1080 / 2 - 275 + 33), Color.White);
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
                     spriteBatch.Draw(HP, new Vector2(1920 / 2 + 612 - 102 + 204 - 36 - 37 - 37 - 37, 1080 / 2 - 275 + 33), Color.White);
@@ -459,6 +455,7 @@ namespace ZitH
                     core.ui.EscMenuButtons();
                     break;
                 case 2:
+                    spriteBatch.DrawString(font, $"Moves: {Convert.ToString(move)}", new Vector2(1920 / 2 - 50 - 850, 1080 / 2 - 100 + 200 ), Color.Red);
                     break;
                 case 3:
                     if (BorisTurn)

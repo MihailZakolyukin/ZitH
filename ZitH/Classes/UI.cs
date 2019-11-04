@@ -45,24 +45,28 @@ namespace ZitH
                 switch (tmp)
                 {
                     case 1:
+                        Game1.move = 1;
                         Game1.isNumber1 = true;
                         Game1.isNumber2 = false;
                         Game1.isNumber3 = false;
                         Game1.isNumber4 = false;
                         break;
                     case 2:
+                        Game1.move = 2;
                         Game1.isNumber1 = false;
                         Game1.isNumber2 = true;
                         Game1.isNumber3 = false;
                         Game1.isNumber4 = false;
                         break;
                     case 3:
+                        Game1.move = 3;
                         Game1.isNumber1 = false;
                         Game1.isNumber2 = false;
                         Game1.isNumber3 = true;
                         Game1.isNumber4 = false;
                         break;
                     case 4:
+                        Game1.move = 4;
                         Game1.isNumber1 = false;
                         Game1.isNumber2 = false;
                         Game1.isNumber3 = false;
