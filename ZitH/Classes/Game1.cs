@@ -358,7 +358,7 @@ namespace ZitH
             spriteBatch.End();
         }
 
-        void DrawGame() //Drawing game
+        void DrawGame() //Drawing Game
         {
             GraphicsDevice.Clear(Color.White);
             spriteBatch.Begin();
