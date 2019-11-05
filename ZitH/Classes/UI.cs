@@ -77,119 +77,133 @@ namespace ZitH
             }
             if (Mouseclick() && RecChecker(graphics.NextTurnRec))
             {
-                if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false)
-                {
-                    Game1.BorisTurn = true;
-                }
-
                 //Next after Boris
-                if (Game1.BorisTurn && Game1.isMaximSelected)
+                if (Game1.BorisTurn)
                 {
-                    Game1.BorisTurn = false;
-                    Game1.MaximTurn = true;
-                }
-                else if (Game1.BorisTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
-                {
-                    Game1.BorisTurn = false;
-                    Game1.NadyaTurn = true;
-                }
-                else if (Game1.BorisTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
-                {
-                    Game1.BorisTurn = false;
-                    Game1.NastyaTurn = true;
-                }
-                else if (Game1.BorisTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
-                {
-                    Game1.BorisTurn = false;
-                    Game1.SashaTurn = true;
+                    if (Game1.BorisTurn && Game1.isMaximSelected)
+                    {
+                        Game1.BorisTurn = false;
+                        Game1.MaximTurn = true;
+                    }
+                    else if (Game1.BorisTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
+                    {
+                        Game1.BorisTurn = false;
+                        Game1.NadyaTurn = true;
+                    }
+                    else if (Game1.BorisTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
+                    {
+                        Game1.BorisTurn = false;
+                        Game1.NastyaTurn = true;
+                    }
+                    else if (Game1.BorisTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
+                    {
+                        Game1.BorisTurn = false;
+                        Game1.SashaTurn = true;
+                    }
                 }
 
                 //Next after Maxim
-                if (Game1.MaximTurn && Game1.isNadyaSelected)
+                if (Game1.MaximTurn)
                 {
-                    Game1.MaximTurn = false;
-                    Game1.NadyaTurn = true;
-                }
-                else if (Game1.MaximTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
-                {
-                    Game1.MaximTurn = false;
-                    Game1.NastyaTurn = true;
-                }
-                else if (Game1.MaximTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
-                {
-                    Game1.MaximTurn = false;
-                    Game1.SashaTurn = true;
-                }
-                else if (Game1.MaximTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
-                {
-                    Game1.MaximTurn = false;
-                    Game1.BorisTurn = true;
+                    if (Game1.MaximTurn && Game1.isNadyaSelected)
+                    {
+                        Game1.MaximTurn = false;
+                        Game1.NadyaTurn = true;
+                    }
+                    else if (Game1.MaximTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
+                    {
+                        Game1.MaximTurn = false;
+                        Game1.NastyaTurn = true;
+                    }
+                    else if (Game1.MaximTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
+                    {
+                        Game1.MaximTurn = false;
+                        Game1.SashaTurn = true;
+                    }
+                    else if (Game1.MaximTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
+                    {
+                        Game1.MaximTurn = false;
+                        Game1.BorisTurn = true;
+                    }
                 }
 
                 //Next after Nadya
-                if (Game1.NadyaTurn && Game1.isNastyaSelected)
+                if (Game1.NadyaTurn)
                 {
-                    Game1.NadyaTurn = false;
-                    Game1.NastyaTurn = true;
-                }
-                else if (Game1.NadyaTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
-                {
-                    Game1.NadyaTurn = false;
-                    Game1.SashaTurn = true;
-                }
-                else if (Game1.NadyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
-                {
-                    Game1.NadyaTurn = false;
-                    Game1.BorisTurn = true;
-                }
-                else if (Game1.NadyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
-                {
-                    Game1.NadyaTurn = false;
-                    Game1.MaximTurn = true;
+                    if (Game1.NadyaTurn && Game1.isNastyaSelected)
+                    {
+                        Game1.NadyaTurn = false;
+                        Game1.NastyaTurn = true;
+                    }
+                    else if (Game1.NadyaTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
+                    {
+                        Game1.NadyaTurn = false;
+                        Game1.SashaTurn = true;
+                    }
+                    else if (Game1.NadyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
+                    {
+                        Game1.NadyaTurn = false;
+                        Game1.BorisTurn = true;
+                    }
+                    else if (Game1.NadyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
+                    {
+                        Game1.NadyaTurn = false;
+                        Game1.MaximTurn = true;
+                    }
                 }
 
                 //Next after Nastya
-                if (Game1.NastyaTurn && Game1.isSashaSelected)
+                if (Game1.NastyaTurn)
                 {
-                    Game1.NastyaTurn = false;
-                    Game1.SashaTurn = true;
-                }
-                else if (Game1.NastyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
-                {
-                    Game1.NastyaTurn = false;
-                    Game1.BorisTurn = true;
-                }
-                else if (Game1.NastyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
-                {
-                    Game1.NastyaTurn = false;
-                    Game1.MaximTurn = true;
-                }
-                else if (Game1.NastyaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
-                {
-                    Game1.NastyaTurn = false;
-                    Game1.NadyaTurn = true;
+                    if (Game1.NastyaTurn && Game1.isSashaSelected)
+                    {
+                        Game1.NastyaTurn = false;
+                        Game1.SashaTurn = true;
+                    }
+                    else if (Game1.NastyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
+                    {
+                        Game1.NastyaTurn = false;
+                        Game1.BorisTurn = true;
+                    }
+                    else if (Game1.NastyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
+                    {
+                        Game1.NastyaTurn = false;
+                        Game1.MaximTurn = true;
+                    }
+                    else if (Game1.NastyaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
+                    {
+                        Game1.NastyaTurn = false;
+                        Game1.NadyaTurn = true;
+                    }
                 }
 
                 //Next after Sasha
-                if (Game1.SashaTurn && Game1.isBorisSelected)
+                if (Game1.SashaTurn)
                 {
-                    Game1.SashaTurn = false;
+                    if (Game1.SashaTurn && Game1.isBorisSelected)
+                    {
+                        Game1.SashaTurn = false;
+                        Game1.BorisTurn = true;
+                    }
+                    else if (Game1.SashaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
+                    {
+                        Game1.SashaTurn = false;
+                        Game1.MaximTurn = true;
+                    }
+                    else if (Game1.SashaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
+                    {
+                        Game1.SashaTurn = false;
+                        Game1.NadyaTurn = true;
+                    }
+                    else if (Game1.SashaTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
+                    {
+                        Game1.SashaTurn = false;
+                        Game1.NastyaTurn = true;
+                    }
+                }
+                if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false)
+                {
                     Game1.BorisTurn = true;
-                }
-                else if (Game1.SashaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
-                {
-                    Game1.SashaTurn = false;
-                    Game1.MaximTurn = true;
-                }
-                else if (Game1.SashaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
-                {
-                    Game1.SashaTurn = false;
-                    Game1.NadyaTurn = true;
-                }
-                else if (Game1.SashaTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
-                {
-                    Game1.SashaTurn = false;
-                    Game1.NastyaTurn = true;
                 }
 
                 Game1.gameScene = 3;
