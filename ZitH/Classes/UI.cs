@@ -84,21 +84,25 @@ namespace ZitH
                     {
                         Game1.BorisTurn = false;
                         Game1.MaximTurn = true;
+                        return;
                     }
                     else if (Game1.BorisTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
                     {
                         Game1.BorisTurn = false;
                         Game1.NadyaTurn = true;
+                        return;
                     }
                     else if (Game1.BorisTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
                     {
                         Game1.BorisTurn = false;
                         Game1.NastyaTurn = true;
+                        return;
                     }
                     else if (Game1.BorisTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
                     {
                         Game1.BorisTurn = false;
                         Game1.SashaTurn = true;
+                        return;
                     }
                 }
 
@@ -109,21 +113,25 @@ namespace ZitH
                     {
                         Game1.MaximTurn = false;
                         Game1.NadyaTurn = true;
+                        return;
                     }
                     else if (Game1.MaximTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
                     {
                         Game1.MaximTurn = false;
                         Game1.NastyaTurn = true;
+                        return;
                     }
                     else if (Game1.MaximTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
                     {
                         Game1.MaximTurn = false;
                         Game1.SashaTurn = true;
+                        return;
                     }
                     else if (Game1.MaximTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
                     {
                         Game1.MaximTurn = false;
                         Game1.BorisTurn = true;
+                        return;
                     }
                 }
 
@@ -134,21 +142,25 @@ namespace ZitH
                     {
                         Game1.NadyaTurn = false;
                         Game1.NastyaTurn = true;
+                        return;
                     }
                     else if (Game1.NadyaTurn && Game1.isSashaSelected && Game1.isNastyaSelected == false)
                     {
                         Game1.NadyaTurn = false;
                         Game1.SashaTurn = true;
+                        return;
                     }
                     else if (Game1.NadyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
                     {
                         Game1.NadyaTurn = false;
                         Game1.BorisTurn = true;
+                        return;
                     }
                     else if (Game1.NadyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
                     {
                         Game1.NadyaTurn = false;
                         Game1.MaximTurn = true;
+                        return;
                     }
                 }
 
@@ -159,21 +171,25 @@ namespace ZitH
                     {
                         Game1.NastyaTurn = false;
                         Game1.SashaTurn = true;
+                        return;
                     }
                     else if (Game1.NastyaTurn && Game1.isBorisSelected && Game1.isSashaSelected == false)
                     {
                         Game1.NastyaTurn = false;
                         Game1.BorisTurn = true;
+                        return;
                     }
                     else if (Game1.NastyaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
                     {
                         Game1.NastyaTurn = false;
                         Game1.MaximTurn = true;
+                        return;
                     }
                     else if (Game1.NastyaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
                     {
                         Game1.NastyaTurn = false;
                         Game1.NadyaTurn = true;
+                        return;
                     }
                 }
 
@@ -184,26 +200,43 @@ namespace ZitH
                     {
                         Game1.SashaTurn = false;
                         Game1.BorisTurn = true;
+                        return;
                     }
                     else if (Game1.SashaTurn && Game1.isMaximSelected && Game1.isBorisSelected == false)
                     {
                         Game1.SashaTurn = false;
                         Game1.MaximTurn = true;
+                        return;
                     }
                     else if (Game1.SashaTurn && Game1.isNadyaSelected && Game1.isMaximSelected == false)
                     {
                         Game1.SashaTurn = false;
                         Game1.NadyaTurn = true;
+                        return;
                     }
                     else if (Game1.SashaTurn && Game1.isNastyaSelected && Game1.isNadyaSelected == false)
                     {
                         Game1.SashaTurn = false;
                         Game1.NastyaTurn = true;
+                        return;
                     }
                 }
-                if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false)
+
+                if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false && Game1.isBorisSelected)
                 {
                     Game1.BorisTurn = true;
+                }else if (Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false && Game1.isMaximSelected)
+                {
+                    Game1.MaximTurn = true;
+                }else if(Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false && Game1.isNadyaSelected)
+                {
+                    Game1.NadyaTurn = true;
+                }else if(Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false && Game1.isNastyaSelected)
+                {
+                    Game1.NastyaTurn = true;
+                }else if(Game1.BorisTurn == false && Game1.MaximTurn == false && Game1.NadyaTurn == false && Game1.NastyaTurn == false && Game1.SashaTurn == false && Game1.isSashaSelected)
+                {
+                    Game1.SashaTurn = true;
                 }
 
                 Game1.gameScene = 3;
