@@ -12,6 +12,7 @@ namespace ZitH
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Random random = new Random();
         Core core = new Core();
 
         public static MouseState mouse = Mouse.GetState();
@@ -62,9 +63,10 @@ namespace ZitH
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
-            KnifeHD, MedkitHD, PistolHD, RunSmall, /*Plus,*/ //Items HD
+            RunSmall, /*Plus,*/ //Items HD
             Aim, RunImg, Sabre, Teeth, //Events
-            Map; //Map
+            Map, //Map
+            BackSide; //Etc
         private Vector2 position, position1, position2, position3, position4, position5;
 
         public Game1()
@@ -319,6 +321,8 @@ namespace ZitH
             //Plus = Content.Load<Texture2D>("img/Plus");
 
             Map = Content.Load<Texture2D>("img/Map");
+
+            BackSide = Content.Load<Texture2D>("img/BackSide");
         }
 
         private void Positions() //Positions
@@ -367,6 +371,8 @@ namespace ZitH
             spriteBatch.Draw(Map, core.ui.graphics.mapRec, Color.White);
             spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
             spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
+
+            CardSpawning();
 
             if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
             if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
@@ -507,6 +513,29 @@ namespace ZitH
             EscButtonState = Keyboard.GetState();
             Keyboardstate2 = Keyboardstate;
             Keyboardstate = Keyboard.GetState();
-        }   
+        }
+
+        public void CardSpawning()
+        {
+            int randI, randA, count = 0;
+            randI = random.Next(1, 12);
+            randA = random.Next(1, 12);
+
+            for (int i = 1; i <= 11; i++)
+            {
+                if (randI == i)
+                {
+                    for (int a = 1; a <= 11; a++)
+                    {
+                        if (randA == a)
+                        {
+                            count++;
+                            spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * i, 1080 / 2 - 52 * a + 264), Color.White);
+                            if (count >= 55) break;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
