@@ -517,24 +517,28 @@ namespace ZitH
 
         public void CardSpawning()
         {
-            int randI, randA, count = 0;
-            randI = random.Next(1, 12);
-            randA = random.Next(1, 12);
+            //int randI, randA /*, count= 0*/;
+            //randI = random.Next(1, 12);
+            //randA = random.Next(1, 12);
 
-            for (int i = 1; i <= 11; i++)
+            /*for (int i = 1; i <= 11; i++)
             {
-                if (randI == i)
-                {
                     for (int a = 1; a <= 11; a++)
                     {
-                        if (randA == a)
+                        if (randA == a && randI == i)
                         {
                             count++;
                             spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * i, 1080 / 2 - 52 * a + 264), Color.White);
                             if (count >= 55) break;
                         }
                     }
-                }
+            }
+            */
+            for (int i = 1; i <= 55; i++)
+            {
+                spriteBatch.DrawString(font, Convert.ToString(i), new Vector2(1920 / 2 - 100 - 500, 1080 / 2 - 100), Color.Red);
+                spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * random.Next(0, 12), 1080 / 2 - 52 * random.Next(0, 12) + 264), Color.White);
+                if (i >= 55) return;
             }
         }
     }
