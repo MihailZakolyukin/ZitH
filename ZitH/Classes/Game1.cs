@@ -31,6 +31,8 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
+        int i = 1, randI, randA;   
+
         //public static string fullscreenon = "img/fullscreenon";
         //public static string fullscreenoff = "img/fullscreenoff";
         //public static string fullscreenURL = "img/fullscreenoff";
@@ -102,6 +104,9 @@ namespace ZitH
 
         protected override void Update(GameTime gameTime)
         {
+            randI = random.Next(1, 12);
+            randA = random.Next(1, 12);
+
             if (scen == 0 && EscButtonState.IsKeyDown(Keys.Escape) && EscButtonState2.IsKeyUp(Keys.Escape)) //Is escbutton pressed
             {
                 EscButton = true;
@@ -515,29 +520,13 @@ namespace ZitH
             Keyboardstate = Keyboard.GetState();
         }
 
-        public void CardSpawning()
+        public void CardSpawning() //Spawning 55 cards on the map (not working)
         {
-            //int randI, randA /*, count= 0*/;
-            //randI = random.Next(1, 12);
-            //randA = random.Next(1, 12);
-
-            /*for (int i = 1; i <= 11; i++)
+            if (i <= 55)
             {
-                    for (int a = 1; a <= 11; a++)
-                    {
-                        if (randA == a && randI == i)
-                        {
-                            count++;
-                            spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * i, 1080 / 2 - 52 * a + 264), Color.White);
-                            if (count >= 55) break;
-                        }
-                    }
-            }
-            */
-            for (int i = 1; i <= 55; i++)
-            {
+                i++;
                 spriteBatch.DrawString(font, Convert.ToString(i), new Vector2(1920 / 2 - 100 - 500, 1080 / 2 - 100), Color.Red);
-                spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * random.Next(0, 12), 1080 / 2 - 52 * random.Next(0, 12) + 264), Color.White);
+                spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * randI, 1080 / 2 - 52 * randA + 264), Color.White);
                 if (i >= 55) return;
             }
         }
