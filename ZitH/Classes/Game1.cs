@@ -69,7 +69,8 @@ namespace ZitH
             Aim, RunImg, Sabre, Teeth, //Events
             Map, //Map
             BackSide; //Etc
-        private Vector2 position, position1, position2, position3, position4, position5;
+        private Vector2 position1, position2, position3, position4, position5;
+        private Vector2[] position = new Vector2[55];
 
         public Game1()
         {
@@ -95,6 +96,8 @@ namespace ZitH
 
             Positions();
             Load();
+
+            CardSpawning();
         }
 
         protected override void UnloadContent()
@@ -332,13 +335,11 @@ namespace ZitH
 
         private void Positions() //Positions
         {
-            //position = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
             position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
             position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
             position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
             position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
-            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);
-
+            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);  
             //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 -52*11 + 264); //Top left corner
             //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52*11, 1080 / 2 + 264); //Bottom right corner
         }
@@ -377,7 +378,7 @@ namespace ZitH
             spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
             spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
 
-            CardSpawning();
+            //CardSpawning();
 
             if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
             if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
@@ -409,7 +410,7 @@ namespace ZitH
             if (EscButton) gameScene = 1;
 
             core.ui.GameButtons();
-            switch (gameScene)
+            switch (gameScene) //0-Card selection, 1-Esc menu, 2-Game, 3-Turn menu;
             {
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
@@ -522,13 +523,14 @@ namespace ZitH
 
         public void CardSpawning() //Spawning 55 cards on the map (not working)
         {
-            if (i <= 55)
+            spriteBatch.Begin();
+            for (i = 1; i <= 53; i++)
             {
-                i++;
-                spriteBatch.DrawString(font, Convert.ToString(i), new Vector2(1920 / 2 - 100 - 500, 1080 / 2 - 100), Color.Red);
-                spriteBatch.Draw(BackSide, new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * randI, 1080 / 2 - 52 * randA + 264), Color.White);
-                if (i >= 55) return;
+                position[i] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * randI, 1080 / 2 - 52 * randA + 264);
+                spriteBatch.Draw(BackSide, position[i], Color.White);
+                spriteBatch.DrawString(font, $"{Convert.ToString(position[i])} /n", new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 - 52 * 11 + 264), Color.Red);
             }
+            spriteBatch.End();
         }
     }
 }
