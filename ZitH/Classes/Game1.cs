@@ -31,7 +31,7 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 1, randI, randA;   
+        int i = 0, randI, randA;   
 
         //public static string fullscreenon = "img/fullscreenon";
         //public static string fullscreenoff = "img/fullscreenoff";
@@ -95,9 +95,7 @@ namespace ZitH
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Positions();
-            Load();
-
-            CardSpawning();
+            Load();   
         }
 
         protected override void UnloadContent()
@@ -378,7 +376,7 @@ namespace ZitH
             spriteBatch.Draw(NextTurn, core.ui.graphics.NextTurnRec, Color.White);
             spriteBatch.Draw(Throw, core.ui.graphics.ThrowRec, Color.White);
 
-            //CardSpawning();
+            CardSpawning();
 
             if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
             if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
@@ -523,14 +521,67 @@ namespace ZitH
 
         public void CardSpawning() //Spawning 55 cards on the map (not working)
         {
-            spriteBatch.Begin();
-            for (i = 1; i <= 53; i++)
-            {
+            if(i <= 54) { 
                 position[i] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * randI, 1080 / 2 - 52 * randA + 264);
-                spriteBatch.Draw(BackSide, position[i], Color.White);
-                spriteBatch.DrawString(font, $"{Convert.ToString(position[i])} /n", new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 - 52 * 11 + 264), Color.Red);
+                i++;
             }
-            spriteBatch.End();
+
+            //idk what i'm doing wrong, this fucking loop doesn't work
+            spriteBatch.Draw(BackSide, position[0], Color.White);
+            spriteBatch.Draw(BackSide, position[1], Color.White);
+            spriteBatch.Draw(BackSide, position[2], Color.White);
+            spriteBatch.Draw(BackSide, position[3], Color.White);
+            spriteBatch.Draw(BackSide, position[4], Color.White);
+            spriteBatch.Draw(BackSide, position[5], Color.White);
+            spriteBatch.Draw(BackSide, position[6], Color.White);
+            spriteBatch.Draw(BackSide, position[7], Color.White);
+            spriteBatch.Draw(BackSide, position[8], Color.White);
+            spriteBatch.Draw(BackSide, position[9], Color.White);
+            spriteBatch.Draw(BackSide, position[10], Color.White);
+            spriteBatch.Draw(BackSide, position[11], Color.White);
+            spriteBatch.Draw(BackSide, position[12], Color.White);
+            spriteBatch.Draw(BackSide, position[13], Color.White);
+            spriteBatch.Draw(BackSide, position[14], Color.White);
+            spriteBatch.Draw(BackSide, position[15], Color.White);
+            spriteBatch.Draw(BackSide, position[16], Color.White);
+            spriteBatch.Draw(BackSide, position[17], Color.White);
+            spriteBatch.Draw(BackSide, position[18], Color.White);
+            spriteBatch.Draw(BackSide, position[19], Color.White);
+            spriteBatch.Draw(BackSide, position[20], Color.White);
+            spriteBatch.Draw(BackSide, position[21], Color.White);
+            spriteBatch.Draw(BackSide, position[22], Color.White);
+            spriteBatch.Draw(BackSide, position[23], Color.White);
+            spriteBatch.Draw(BackSide, position[24], Color.White);
+            spriteBatch.Draw(BackSide, position[25], Color.White);
+            spriteBatch.Draw(BackSide, position[26], Color.White);
+            spriteBatch.Draw(BackSide, position[27], Color.White);
+            spriteBatch.Draw(BackSide, position[28], Color.White);
+            spriteBatch.Draw(BackSide, position[29], Color.White);
+            spriteBatch.Draw(BackSide, position[30], Color.White);
+            spriteBatch.Draw(BackSide, position[31], Color.White);
+            spriteBatch.Draw(BackSide, position[32], Color.White);
+            spriteBatch.Draw(BackSide, position[33], Color.White);
+            spriteBatch.Draw(BackSide, position[34], Color.White);
+            spriteBatch.Draw(BackSide, position[35], Color.White);
+            spriteBatch.Draw(BackSide, position[36], Color.White);
+            spriteBatch.Draw(BackSide, position[37], Color.White);
+            spriteBatch.Draw(BackSide, position[38], Color.White);
+            spriteBatch.Draw(BackSide, position[39], Color.White);
+            spriteBatch.Draw(BackSide, position[40], Color.White);
+            spriteBatch.Draw(BackSide, position[41], Color.White);
+            spriteBatch.Draw(BackSide, position[42], Color.White);
+            spriteBatch.Draw(BackSide, position[43], Color.White);
+            spriteBatch.Draw(BackSide, position[44], Color.White);
+            spriteBatch.Draw(BackSide, position[45], Color.White);
+            spriteBatch.Draw(BackSide, position[46], Color.White);
+            spriteBatch.Draw(BackSide, position[47], Color.White);
+            spriteBatch.Draw(BackSide, position[48], Color.White);
+            spriteBatch.Draw(BackSide, position[49], Color.White);
+            spriteBatch.Draw(BackSide, position[50], Color.White);
+            spriteBatch.Draw(BackSide, position[51], Color.White);
+            spriteBatch.Draw(BackSide, position[52], Color.White);
+            spriteBatch.Draw(BackSide, position[53], Color.White);
+            spriteBatch.Draw(BackSide, position[54], Color.White);
         }
     }
 }
