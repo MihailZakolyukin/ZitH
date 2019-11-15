@@ -31,7 +31,8 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 0, randI, randA;   
+        int i = 0, randI, randA;   //for CardSpawning method
+        int b = 0;
 
         //public static string fullscreenon = "img/fullscreenon";
         //public static string fullscreenoff = "img/fullscreenoff";
@@ -56,6 +57,12 @@ namespace ZitH
         public static bool isNumber3 = false;
         public static bool isNumber4 = false;
 
+        public static int BorisPosition;
+        public static int MaximPosition;
+        public static int NadyaPosition;
+        public static int NastyaPosition;
+        public static int SashaPosition;
+
         private SpriteFont font;
 
         private Texture2D play, settings, exit, /*fullscreen,*/ back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
@@ -69,8 +76,10 @@ namespace ZitH
             Aim, RunImg, Sabre, Teeth, //Events
             Map, //Map
             BackSide; //Etc
-        private Vector2 position1, position2, position3, position4, position5;
+        //private Vector2 position1, position2, position3, position4, position5;
+        private Vector2[] HumPos = new Vector2[5];
         private Vector2[] position = new Vector2[55];
+        private Vector2[] HMP = new Vector2[5];
 
         public Game1()
         {
@@ -128,22 +137,22 @@ namespace ZitH
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
-                    position1.Y -= 52;
+                    HumPos[BorisPosition].Y -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
-                    position1.X -= 52;
+                    HumPos[BorisPosition].X -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
-                    position1.Y += 52;
+                    HumPos[BorisPosition].Y += 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
-                    position1.X += 52;
+                    HumPos[BorisPosition].X += 52;
                 }
             }
 
@@ -152,22 +161,22 @@ namespace ZitH
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
-                    position2.Y -= 52;
+                    HumPos[MaximPosition].Y -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
-                    position2.X -= 52;
+                    HumPos[MaximPosition].X -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
-                    position2.Y += 52;
+                    HumPos[MaximPosition].Y += 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
-                    position2.X += 52;
+                    HumPos[MaximPosition].X += 52;
                 }
             }
 
@@ -176,22 +185,22 @@ namespace ZitH
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
-                    position3.Y -= 52;
+                    HumPos[NadyaPosition].Y -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
-                    position3.X -= 52;
+                    HumPos[NadyaPosition].X -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
-                    position3.Y += 52;
+                    HumPos[NadyaPosition].Y += 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
-                    position3.X += 52;
+                    HumPos[NadyaPosition].X += 52;
                 }
             }
 
@@ -200,22 +209,22 @@ namespace ZitH
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
-                    position4.Y -= 52;
+                    HumPos[NastyaPosition].Y -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
-                    position4.X -= 52;
+                    HumPos[NastyaPosition].X -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
-                    position4.Y += 52;
+                    HumPos[NastyaPosition].Y += 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
-                    position4.X += 52;
+                    HumPos[NastyaPosition].X += 52;
                 }
             }
 
@@ -224,22 +233,22 @@ namespace ZitH
                 if (Keyboardstate.IsKeyDown(Keys.W) && Keyboardstate2.IsKeyUp(Keys.W) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Up) && Keyboardstate2.IsKeyUp(Keys.Up) && move >= 1)
                 {
                     move--;
-                    position5.Y -= 52;
+                    HumPos[SashaPosition].Y -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.A) && Keyboardstate2.IsKeyUp(Keys.A) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Left) && Keyboardstate2.IsKeyUp(Keys.Left) && move >= 1)
                 {
                     move--;
-                    position5.X -= 52;
+                    HumPos[SashaPosition].X -= 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.S) && Keyboardstate2.IsKeyUp(Keys.S) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Down) && Keyboardstate2.IsKeyUp(Keys.Down) && move >= 1)
                 {
                     move--;
-                    position5.Y += 52;
+                    HumPos[SashaPosition].Y += 52;
                 }
                 if (Keyboardstate.IsKeyDown(Keys.D) && Keyboardstate2.IsKeyUp(Keys.D) && move >= 1 || Keyboardstate.IsKeyDown(Keys.Right) && Keyboardstate2.IsKeyUp(Keys.Right) && move >= 1)
                 {
                     move--;
-                    position5.X += 52;
+                    HumPos[SashaPosition].X += 52;
                 }
             }
 
@@ -333,13 +342,20 @@ namespace ZitH
 
         private void Positions() //Positions
         {
-            position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
-            position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
-            position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
-            position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
-            position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);  
+            HumPos[0] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+            HumPos[1] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
+            HumPos[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
+            HumPos[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
+            HumPos[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);
+            //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
+            //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
+            //position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
+            //position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
+            //position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);  
             //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 -52*11 + 264); //Top left corner
             //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52*11, 1080 / 2 + 264); //Bottom right corner
+
+
         }
 
         void DrawMenu() //Drawing Menu
@@ -378,11 +394,41 @@ namespace ZitH
 
             CardSpawning();
 
-            if (isBorisSelected) spriteBatch.Draw(Boris, position1, Color.White);
-            if (isMaximSelected) spriteBatch.Draw(Maxim, position2, Color.White);
-            if (isNadyaSelected) spriteBatch.Draw(Nadya, position3, Color.White);
-            if (isNastyaSelected) spriteBatch.Draw(Nastya, position4, Color.White);
-            if (isSashaSelected) spriteBatch.Draw(Sasha, position5, Color.White);
+            if (isBorisSelected)
+            {
+                //spriteBatch.Draw(Boris, HMP[b], Color.White);
+                spriteBatch.Draw(Boris, HumPos[b], Color.White);
+                BorisPosition = b;
+                b++;
+            }
+            if (isMaximSelected)
+            {
+                //spriteBatch.Draw(Maxim, HMP[b], Color.White);
+                spriteBatch.Draw(Maxim, HumPos[b], Color.White);
+                MaximPosition = b;
+                b++;
+            }
+            if (isNadyaSelected)
+            {
+                //spriteBatch.Draw(Nadya, HMP[b], Color.White);
+                spriteBatch.Draw(Nadya, HumPos[b], Color.White);
+                NadyaPosition = b;
+                b++;
+            }
+            if (isNastyaSelected)
+            {
+                //spriteBatch.Draw(Nastya, HMP[b], Color.White);
+                spriteBatch.Draw(Nastya, HumPos[b], Color.White);
+                NastyaPosition = b;
+                b++;
+            }
+            if (isSashaSelected)
+            {
+                //spriteBatch.Draw(Sasha, HMP[b], Color.White);
+                spriteBatch.Draw(Sasha, HumPos[b], Color.White);
+                SashaPosition = b;
+                b++;
+            }
 
             if (isNumber1)
             {
