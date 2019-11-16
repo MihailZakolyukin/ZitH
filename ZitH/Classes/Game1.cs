@@ -85,6 +85,36 @@ namespace ZitH
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            if (isBorisSelected)
+            {
+                BorisPosition = b;
+                b++;
+            }
+
+            if (isMaximSelected)
+            {
+                MaximPosition = b;
+                b++;
+            }
+
+            if (isNadyaSelected)
+            {
+                NadyaPosition = b;
+                b++;
+            }
+
+            if (isNastyaSelected)
+            {
+                NastyaPosition = b;
+                b++;
+            }
+
+            if (isSashaSelected)
+            {
+                SashaPosition = b;
+                b++;
+            }
         }
 
 
@@ -94,7 +124,7 @@ namespace ZitH
             graphics.PreferredBackBufferHeight = 1080;
             graphics.IsFullScreen = isfullscreen;
             graphics.ApplyChanges();
-            IsMouseVisible = true;
+            IsMouseVisible = true;       
 
             base.Initialize();
         }
@@ -397,37 +427,27 @@ namespace ZitH
             if (isBorisSelected)
             {
                 //spriteBatch.Draw(Boris, HMP[b], Color.White);
-                spriteBatch.Draw(Boris, HumPos[b], Color.White);
-                BorisPosition = b;
-                b++;
-            }
+                spriteBatch.Draw(Boris, HumPos[BorisPosition], Color.White);               
+            }   
             if (isMaximSelected)
             {
                 //spriteBatch.Draw(Maxim, HMP[b], Color.White);
-                spriteBatch.Draw(Maxim, HumPos[b], Color.White);
-                MaximPosition = b;
-                b++;
+                spriteBatch.Draw(Maxim, HumPos[MaximPosition], Color.White);
             }
             if (isNadyaSelected)
             {
                 //spriteBatch.Draw(Nadya, HMP[b], Color.White);
-                spriteBatch.Draw(Nadya, HumPos[b], Color.White);
-                NadyaPosition = b;
-                b++;
+                spriteBatch.Draw(Nadya, HumPos[NadyaPosition], Color.White);
             }
             if (isNastyaSelected)
             {
                 //spriteBatch.Draw(Nastya, HMP[b], Color.White);
-                spriteBatch.Draw(Nastya, HumPos[b], Color.White);
-                NastyaPosition = b;
-                b++;
+                spriteBatch.Draw(Nastya, HumPos[NastyaPosition], Color.White);
             }
             if (isSashaSelected)
             {
                 //spriteBatch.Draw(Sasha, HMP[b], Color.White);
-                spriteBatch.Draw(Sasha, HumPos[b], Color.White);
-                SashaPosition = b;
-                b++;
+                spriteBatch.Draw(Sasha, HumPos[SashaPosition], Color.White);
             }
 
             if (isNumber1)
