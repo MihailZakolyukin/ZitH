@@ -33,6 +33,7 @@ namespace ZitH
 
         int i = 0, randI, randA;   //for CardSpawning method
         int b = 0;
+        public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
 
         //public static string fullscreenon = "img/fullscreenon";
         //public static string fullscreenoff = "img/fullscreenoff";
@@ -84,37 +85,7 @@ namespace ZitH
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-
-            if (isBorisSelected)
-            {
-                BorisPosition = b;
-                b++;
-            }
-
-            if (isMaximSelected)
-            {
-                MaximPosition = b;
-                b++;
-            }
-
-            if (isNadyaSelected)
-            {
-                NadyaPosition = b;
-                b++;
-            }
-
-            if (isNastyaSelected)
-            {
-                NastyaPosition = b;
-                b++;
-            }
-
-            if (isSashaSelected)
-            {
-                SashaPosition = b;
-                b++;
-            }
+            Content.RootDirectory = "Content";     
         }
 
 
@@ -427,27 +398,57 @@ namespace ZitH
             if (isBorisSelected)
             {
                 //spriteBatch.Draw(Boris, HMP[b], Color.White);
-                spriteBatch.Draw(Boris, HumPos[BorisPosition], Color.White);               
+                spriteBatch.Draw(Boris, HumPos[BorisPosition], Color.White);
+                if (!BorisFlag)
+                {
+                    BorisPosition = b;
+                    b++;
+                    BorisFlag = true;
+                }
             }   
             if (isMaximSelected)
             {
                 //spriteBatch.Draw(Maxim, HMP[b], Color.White);
                 spriteBatch.Draw(Maxim, HumPos[MaximPosition], Color.White);
+                if (!MaximFlag)
+                {
+                    MaximPosition = b;
+                    b++;
+                    MaximFlag = true;
+                }
             }
             if (isNadyaSelected)
             {
                 //spriteBatch.Draw(Nadya, HMP[b], Color.White);
                 spriteBatch.Draw(Nadya, HumPos[NadyaPosition], Color.White);
+                if (!NadyaFlag)
+                {
+                    NadyaPosition = b;
+                    b++;
+                    NadyaFlag = true;
+                }
             }
             if (isNastyaSelected)
             {
                 //spriteBatch.Draw(Nastya, HMP[b], Color.White);
                 spriteBatch.Draw(Nastya, HumPos[NastyaPosition], Color.White);
+                if (!NastyaFlag)
+                {
+                    NastyaPosition = b;
+                    b++;
+                    NastyaFlag = true;
+                }
             }
             if (isSashaSelected)
             {
                 //spriteBatch.Draw(Sasha, HMP[b], Color.White);
                 spriteBatch.Draw(Sasha, HumPos[SashaPosition], Color.White);
+                if (!SashaFlag)
+                {
+                    SashaPosition = b;
+                    b++;
+                    SashaFlag = true;
+                }
             }
 
             if (isNumber1)
