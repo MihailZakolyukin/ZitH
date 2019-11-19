@@ -348,14 +348,11 @@ namespace ZitH
             HumPos[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
             HumPos[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
             HumPos[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);
-            //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264);
-            //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264);
-            //position3 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
-            //position4 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
-            //position5 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);  
-            //position1 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 -52*11 + 264); //Top left corner
-            //position2 = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52*11, 1080 / 2 + 264); //Bottom right corner
-
+            HMP[0] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 700);
+            HMP[1] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 600);
+            HMP[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 500);
+            HMP[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 400);
+            HMP[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 300);
 
         }
 
@@ -397,7 +394,7 @@ namespace ZitH
 
             if (isBorisSelected)
             {
-                //spriteBatch.Draw(Boris, HMP[b], Color.White);
+                spriteBatch.Draw(Boris, HMP[BorisPosition], Color.White);
                 spriteBatch.Draw(Boris, HumPos[BorisPosition], Color.White);
                 if (!BorisFlag)
                 {
@@ -408,7 +405,7 @@ namespace ZitH
             }   
             if (isMaximSelected)
             {
-                //spriteBatch.Draw(Maxim, HMP[b], Color.White);
+                spriteBatch.Draw(Maxim, HMP[MaximPosition], Color.White);
                 spriteBatch.Draw(Maxim, HumPos[MaximPosition], Color.White);
                 if (!MaximFlag)
                 {
@@ -419,7 +416,7 @@ namespace ZitH
             }
             if (isNadyaSelected)
             {
-                //spriteBatch.Draw(Nadya, HMP[b], Color.White);
+                spriteBatch.Draw(Nadya, HMP[NadyaPosition], Color.White);
                 spriteBatch.Draw(Nadya, HumPos[NadyaPosition], Color.White);
                 if (!NadyaFlag)
                 {
@@ -430,7 +427,7 @@ namespace ZitH
             }
             if (isNastyaSelected)
             {
-                //spriteBatch.Draw(Nastya, HMP[b], Color.White);
+                spriteBatch.Draw(Nastya, HMP[NastyaPosition], Color.White);
                 spriteBatch.Draw(Nastya, HumPos[NastyaPosition], Color.White);
                 if (!NastyaFlag)
                 {
@@ -441,7 +438,7 @@ namespace ZitH
             }
             if (isSashaSelected)
             {
-                //spriteBatch.Draw(Sasha, HMP[b], Color.White);
+                spriteBatch.Draw(Sasha, HMP[SashaPosition], Color.White);
                 spriteBatch.Draw(Sasha, HumPos[SashaPosition], Color.White);
                 if (!SashaFlag)
                 {
