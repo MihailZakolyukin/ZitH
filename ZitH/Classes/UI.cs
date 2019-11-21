@@ -251,23 +251,8 @@ namespace ZitH
             }
         }
 
-        public void SettingsButtons() //Settings buttons ("fullscreen", back)
+        public void SettingsButtons() //Settings buttons (back)
         {
-            //if (Mouseclick() && RecChecker(graphics.fullscreenRec))
-            //{
-            //    if (Game1.isfullscreen == true)
-            //    {
-            //        Game1.isfullscreen = false;
-            //        Game1.fullscreenURL = Game1.fullscreenon;
-            //    }
-            //
-            //    if (Game1.isfullscreen == false)
-            //    {
-            //        Game1.isfullscreen = true;
-            //        Game1.fullscreenURL = Game1.fullscreenoff;
-            //    }
-            //}
-
             if (Mouseclick() && RecChecker(graphics.backRec))
             {
                 Game1.menuScene = 0;

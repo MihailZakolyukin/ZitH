@@ -12,7 +12,6 @@ namespace ZitH
         public Rectangle playRec;
         public Rectangle settingRec;
         public Rectangle exitRec;
-        //public Rectangle fullscreenRec;
         public Rectangle backRec;
         public Rectangle OkRec;
         public Rectangle EventRec;
@@ -37,8 +36,6 @@ namespace ZitH
             ThrowNumberRec = new Rectangle(1920 / 2 - 50 - 850, 1080 / 2 - 100 + 300, 100, 100);
 
             OkRec = new Rectangle(1920 / 2 - 171 / 2, 1080 / 2 - 50 + 300, 171, 50);
-
-            //fullscreenRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 200 - 95, 402, 95);
             backRec = new Rectangle(1920 / 2 - 201, 1080 / 2 - 95, 402, 95);
 
             BorisRec = new Rectangle(1920 / 2 + 612 - 102, 1080 / 2 - 204, 204, 204);

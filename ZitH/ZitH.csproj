@@ -130,14 +130,19 @@
   <ItemGroup>
     <Content Include="Content\img\Aim.png" />
     <Content Include="Content\img\Ak47.png" />
+    <Content Include="Content\img\AkHD.png" />
     <Content Include="Content\img\Axe.png" />
+    <Content Include="Content\img\AxeHD.png" />
     <Content Include="Content\img\back.png" />
     <Content Include="Content\img\BackSide.png" />
     <Content Include="Content\img\Boris.png" />
     <Content Include="Content\img\BorisHD.png" />
     <Content Include="Content\img\Boss.png" />
+    <Content Include="Content\img\BossHD.png" />
+    <Content Include="Content\img\CrossbowHD.png" />
     <Content Include="Content\img\Crowbow.png" />
     <Content Include="Content\img\Dog.png" />
+    <Content Include="Content\img\DogHD.png" />
     <Content Include="Content\img\exit.png" />
     <Content Include="Content\img\exitfromgame.png" />
     <Content Include="Content\img\exittomm.png" />
@@ -146,8 +151,11 @@
     <Content Include="Content\img\gameBg.jpg" />
     <Content Include="Content\img\GameStart.png" />
     <Content Include="Content\img\Gas.png" />
+    <Content Include="Content\img\GasHD.png" />
     <Content Include="Content\img\Grenade.png" />
+    <Content Include="Content\img\GrenadeHD.png" />
     <Content Include="Content\img\Key.png" />
+    <Content Include="Content\img\KeyHD.png" />
     <Content Include="Content\img\Knife.png" />
     <Content Include="Content\img\KnifeHD.png" />
     <Content Include="Content\img\Map.png" />
@@ -172,6 +180,7 @@
     <Content Include="Content\img\play.png" />
     <Content Include="Content\img\Plus.png" />
     <Content Include="Content\img\RPG.png" />
+    <Content Include="Content\img\RpgHD.png" />
     <Content Include="Content\img\Run.png" />
     <Content Include="Content\img\RunSmall.png" />
     <Content Include="Content\img\Sabre.png" />
@@ -179,12 +188,16 @@
     <Content Include="Content\img\SashaHD.png" />
     <Content Include="Content\img\settings.png" />
     <Content Include="Content\img\Shotgun.png" />
+    <Content Include="Content\img\ShotgunHD.png" />
     <Content Include="Content\img\Spider.png" />
+    <Content Include="Content\img\SpiderHD.png" />
     <Content Include="Content\img\Teeth.png" />
     <Content Include="Content\img\Throw.png" />
     <Content Include="Content\img\Wood.png" />
+    <Content Include="Content\img\WoodHD.png" />
     <Content Include="Content\img\Zombie.png" />
     <Content Include="Content\img\HP.png" />
+    <Content Include="Content\img\ZombieHD.png" />
     <Content Include="Resources\icon.ico" />
     <Content Include="Resources\Icon1.ico" />
     <Content Include="x86\icon.ico" />

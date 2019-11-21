@@ -35,12 +35,6 @@ namespace ZitH
         int b = 0;
         public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
 
-        //public static string fullscreenon = "img/fullscreenon";
-        //public static string fullscreenoff = "img/fullscreenoff";
-        //public static string fullscreenURL = "img/fullscreenoff";
-
-        public static bool isfullscreen = true;
-
         public static bool isBorisSelected = false;
         public static bool isMaximSelected = false;
         public static bool isNadyaSelected = false;
@@ -66,18 +60,19 @@ namespace ZitH
 
         private SpriteFont font;
 
-        private Texture2D play, settings, exit, /*fullscreen,*/ back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
+        private Texture2D play, settings, exit, back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
             Number1, Number2, Number3, Number4, //Numbers
             menuBg, gameBg, opaqueBg, //Backgrounds
             Boris, Maxim, Nadya, Nastya, Sasha, //Humans    
             BorisHD, MaximHD, NadyaHD, NastyaHD, SashaHD, //Humans HD
             Boss, Dog, Spider, Zombie, //Enemies
+            BossHD, DogHD, SpiderHD, ZombieHD, //Enemies HD
             Ak47, Axe, Crowbow, Gas, Grenade, HP, Key, Knife, Medkit, Pistol, RPG, Shotgun, Wood, //Items
-            RunSmall, /*Plus,*/ //Items HD
+            RunSmall, AkHD, AxeHD, CrowbowHD, GasHD, GrenadeHD, KeyHD, KnifeHD, MedkitHD, PistolHD, RpgHD, ShotgunHD, WoodHD, //Items HD
             Aim, RunImg, Sabre, Teeth, //Events
             Map, //Map
             BackSide; //Etc
-        //private Vector2 position1, position2, position3, position4, position5;
+
         private Vector2[] HumPos = new Vector2[5];
         private Vector2[] position = new Vector2[55];
         private Vector2[] HMP = new Vector2[5];
@@ -93,7 +88,7 @@ namespace ZitH
         {
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
-            graphics.IsFullScreen = isfullscreen;
+            graphics.IsFullScreen = true;
             graphics.ApplyChanges();
             IsMouseVisible = true;       
 
@@ -313,6 +308,11 @@ namespace ZitH
             Spider = Content.Load<Texture2D>("img/Spider");
             Zombie = Content.Load<Texture2D>("img/Zombie");
 
+            BossHD = Content.Load<Texture2D>("img/BossHD");
+            DogHD = Content.Load<Texture2D>("img/DogHD");
+            SpiderHD = Content.Load<Texture2D>("img/SpiderHD");
+            ZombieHD = Content.Load<Texture2D>("img/ZombieHD");
+
             Ak47 = Content.Load<Texture2D>("img/Ak47");
             Axe = Content.Load<Texture2D>("img/Axe");
             Crowbow = Content.Load<Texture2D>("img/Crowbow");
@@ -327,14 +327,24 @@ namespace ZitH
             Shotgun = Content.Load<Texture2D>("img/Shotgun");
             Wood = Content.Load<Texture2D>("img/Wood");
 
-            //fullscreen = Content.Load<Texture2D>(fullscreenURL);
+            AkHD = Content.Load<Texture2D>("img/AkHD");
+            AxeHD = Content.Load<Texture2D>("img/AxeHD");
+            CrowbowHD = Content.Load<Texture2D>("img/CrossbowHD");
+            GasHD = Content.Load<Texture2D>("img/GasHD");
+            GrenadeHD = Content.Load<Texture2D>("img/GrenadeHD");
+            KeyHD = Content.Load<Texture2D>("img/KeyHD");
+            KnifeHD = Content.Load<Texture2D>("img/KnifeHD");
+            MedkitHD= Content.Load<Texture2D>("img/MedkitHD");
+            PistolHD = Content.Load<Texture2D>("img/PistolHD");
+            RpgHD = Content.Load<Texture2D>("img/RpgHD");
+            ShotgunHD = Content.Load<Texture2D>("img/ShotgunHD");
+            WoodHD = Content.Load<Texture2D>("img/WoodHD");
 
             Aim = Content.Load<Texture2D>("img/Aim");
             RunImg = Content.Load<Texture2D>("img/Run");
             Sabre = Content.Load<Texture2D>("img/Sabre");
             Teeth = Content.Load<Texture2D>("img/Teeth");
             RunSmall = Content.Load<Texture2D>("img/RunSmall");
-            //Plus = Content.Load<Texture2D>("img/Plus");
 
             Map = Content.Load<Texture2D>("img/Map");
 
@@ -583,7 +593,7 @@ namespace ZitH
             Keyboardstate = Keyboard.GetState();
         }
 
-        public void CardSpawning() //Spawning 55 cards on the map (not working)
+        public void CardSpawning() //Spawning 55 cards on the map
         {
             if(i <= 54) { 
                 position[i] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * randI, 1080 / 2 - 52 * randA + 264);
