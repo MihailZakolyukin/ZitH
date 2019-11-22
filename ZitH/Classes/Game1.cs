@@ -31,7 +31,7 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 0, randI, randA;   //for CardSpawning method
+        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 44, wood = 51, randI, randA;   //for CardSpawning method
         int b = 0;
         public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
 
@@ -656,6 +656,120 @@ namespace ZitH
             spriteBatch.Draw(BackSide, position[52], Color.White);
             spriteBatch.Draw(BackSide, position[53], Color.White);
             spriteBatch.Draw(BackSide, position[54], Color.White);
+
+            if (BorisTurn) p = BorisPosition;
+            if (MaximTurn) p = MaximPosition;
+            if (NadyaTurn) p = NadyaPosition;
+            if (NastyaTurn) p = NastyaPosition;
+            if (SashaTurn) p = SashaPosition;
+
+            if (zombies < 17) //Zombies
+                {
+                    if (HumPos[p] == position[zombies])
+                    {
+
+                    }
+                    zombies++;
+                } else zombies = 0;
+
+                if (dogs < 23) //Dogs
+                {
+                    if (HumPos[p] == position[dogs])
+                    {
+
+                    }
+                } else dogs = 0;
+
+                if (spiders < 28) //Spiders
+                {
+                    if (HumPos[p] == position[spiders])
+                    {
+
+                    }
+                }
+                else spiders = 23;
+
+                if (HumPos[p] == position[28]) //Boss
+                {
+
+                }
+
+                if (grenade < 34)
+                {
+                    if (HumPos[p] == position[grenade])
+                    {
+
+                    }
+                }
+                else grenade = 29;
+
+                if (HumPos[p] == position[34])
+                {
+
+                }
+
+                if (HumPos[p] == position[35])
+                {
+
+                }
+
+                if (HumPos[p] == position[36])
+                {
+
+                }
+
+                if (HumPos[p] == position[37])
+                {
+
+                }
+
+                if (HumPos[p] == position[38])
+                {
+
+                }
+
+                if (HumPos[p] == position[39])
+                {
+
+                }
+
+                if (HumPos[p] == position[40])
+                {
+
+                }
+
+                if (HumPos[p] == position[41])
+                {
+
+                }
+
+                if (HumPos[p] == position[42])
+                {
+
+                }
+
+                if (HumPos[p] == position[43])
+                {
+
+                }
+
+                if (medkit < 51)
+                {
+                    if (HumPos[p] == position[medkit])
+                    {
+
+                    }
+                }
+                else medkit = 44;
+
+                if(wood < 55)
+                {
+                    if (HumPos[p] == position[wood])
+                    {
+
+                    }
+                }
+                else wood = 51;
         }
     }
 }
