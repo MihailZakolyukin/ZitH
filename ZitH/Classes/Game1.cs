@@ -31,9 +31,9 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 44, wood = 51, randI, randA;   //for CardSpawning method
+        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 43, wood = 50, randI, randA;   //for CardSpawning method
         int b = 0;
-        public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
+        public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false, CardFlag = false;
 
         public static bool isBorisSelected = false;
         public static bool isMaximSelected = false;
@@ -482,7 +482,7 @@ namespace ZitH
             if (EscButton) gameScene = 1;
 
             core.ui.GameButtons();
-            switch (gameScene) //0-Card selection, 1-Esc menu, 2-Game, 3-Turn menu;
+            switch (gameScene) //0-Card selection, 1-Esc menu, 2-Game, 3-Turn menu, 4-Card menu;
             {
                 case 0:
                     spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
@@ -572,6 +572,11 @@ namespace ZitH
                         spriteBatch.DrawString(font, "Sasha's turn", new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.Yellow);
                         spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     }               
+                    core.ui.TurnButton();
+                    break;
+                case 4:
+                    spriteBatch.Draw(opaqueBg, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(ok, core.ui.graphics.OkRec, Color.White);
                     core.ui.TurnButton();
                     break;
             }
@@ -667,8 +672,8 @@ namespace ZitH
                 {
                     if (HumPos[p] == position[zombies])
                     {
-
-                    }
+                        spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
                     zombies++;
                 } else zombies = 0;
 
@@ -676,100 +681,100 @@ namespace ZitH
                 {
                     if (HumPos[p] == position[dogs])
                     {
-
+                        spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
                     }
+                    dogs++;
                 } else dogs = 0;
 
                 if (spiders < 28) //Spiders
                 {
                     if (HumPos[p] == position[spiders])
                     {
-
-                    }
+                        spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
+                    spiders++;
                 }
                 else spiders = 23;
 
                 if (HumPos[p] == position[28]) //Boss
                 {
-
-                }
+                    spriteBatch.Draw(BossHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (grenade < 34)
                 {
                     if (HumPos[p] == position[grenade])
                     {
-
-                    }
+                        spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
+                    grenade++;
                 }
                 else grenade = 29;
 
                 if (HumPos[p] == position[34])
                 {
-
-                }
+                    spriteBatch.Draw(AkHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[35])
                 {
-
-                }
+                    spriteBatch.Draw(AxeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[36])
                 {
-
-                }
+                    spriteBatch.Draw(CrowbowHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[37])
                 {
-
-                }
+                    spriteBatch.Draw(GasHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[38])
                 {
-
-                }
+                    spriteBatch.Draw(KeyHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[39])
                 {
-
-                }
+                    spriteBatch.Draw(KnifeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[40])
                 {
-
-                }
+                    spriteBatch.Draw(PistolHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[41])
                 {
-
-                }
+                    spriteBatch.Draw(RpgHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
                 if (HumPos[p] == position[42])
                 {
+                    spriteBatch.Draw(ShotgunHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+            }
 
-                }
-
-                if (HumPos[p] == position[43])
-                {
-
-                }
-
-                if (medkit < 51)
+                if (medkit < 50)
                 {
                     if (HumPos[p] == position[medkit])
                     {
-
-                    }
+                        spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
                 }
-                else medkit = 44;
+                    medkit++;
+                }
+                else medkit = 43;
 
-                if(wood < 55)
+                if(wood < 54)
                 {
                     if (HumPos[p] == position[wood])
                     {
-
-                    }
+                        spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
                 }
-                else wood = 51;
+                    wood++;
+                }
+                else wood = 50;
         }
     }
 }
