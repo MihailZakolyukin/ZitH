@@ -31,9 +31,11 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 43, wood = 50, randI, randA;   //for CardSpawning method
+        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 43, wood = 50, randI, randA;                               //for CardSpawning method
+        public static bool ZombieFlag = false, DogFlag = false, Spiderflag = false,  MedkitFlag= false, WoodFlag = false, GrenadeFlag = false;   //for CardSpawning method
+
         int b = 0;
-        public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false, CardFlag = false;
+        public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
 
         public static bool isBorisSelected = false;
         public static bool isMaximSelected = false;
@@ -669,29 +671,43 @@ namespace ZitH
             if (SashaTurn) p = SashaPosition;
 
             if (zombies < 17) //Zombies
+            {
+                if (HumPos[p] == position[zombies])
                 {
-                    if (HumPos[p] == position[zombies])
+                    if (!ZombieFlag)
                     {
                         spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                }
-                    zombies++;
-                } else zombies = 0;
+                        ZombieFlag = true;
+                    }
+                }else ZombieFlag = false;
+                zombies++;
+            }
+            else zombies = 0;
 
                 if (dogs < 23) //Dogs
                 {
                     if (HumPos[p] == position[dogs])
                     {
+                    if (!DogFlag)
+                    {
                         spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                        DogFlag = true;
                     }
+                    }else DogFlag = true;
                     dogs++;
-                } else dogs = 0;
+                } else dogs = 17;
 
                 if (spiders < 28) //Spiders
                 {
-                    if (HumPos[p] == position[spiders])
+                if (HumPos[p] == position[spiders])
+                {
+                    if (!Spiderflag)
                     {
                         spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                        Spiderflag = true;
+                    }
                 }
+                else Spiderflag = false;
                     spiders++;
                 }
                 else spiders = 23;
@@ -703,10 +719,15 @@ namespace ZitH
 
                 if (grenade < 34)
                 {
-                    if (HumPos[p] == position[grenade])
+                if (HumPos[p] == position[grenade])
+                {
+                    if (!GrenadeFlag)
                     {
                         spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                        GrenadeFlag = true;
+                    }
                 }
+                else GrenadeFlag = false;
                     grenade++;
                 }
                 else grenade = 29;
@@ -760,18 +781,28 @@ namespace ZitH
                 {
                     if (HumPos[p] == position[medkit])
                     {
+                    if (!MedkitFlag)
+                    {
                         spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                        MedkitFlag = true;
+                    }  
                 }
-                    medkit++;
+                else MedkitFlag = false;
+                medkit++;
                 }
                 else medkit = 43;
 
                 if(wood < 54)
                 {
-                    if (HumPos[p] == position[wood])
+                if (HumPos[p] == position[wood])
+                {
+                    if (!WoodFlag)
                     {
                         spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                        WoodFlag = true;
+                    }
                 }
+                else WoodFlag = false;
                     wood++;
                 }
                 else wood = 50;
