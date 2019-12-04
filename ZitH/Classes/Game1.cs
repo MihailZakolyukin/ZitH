@@ -31,8 +31,7 @@ namespace ZitH
         public static bool EscButton = false;
         public static bool exitGame = false;
 
-        int i = 0,p = 0, zombies = 0, dogs = 17, spiders = 23, grenade = 29, medkit = 43, wood = 50, randI, randA;                               //for CardSpawning method
-        public static bool ZombieFlag = false, DogFlag = false, Spiderflag = false,  MedkitFlag= false, WoodFlag = false, GrenadeFlag = false;   //for CardSpawning method
+        int i = 0,p = 0, randI, randA;
 
         int b = 0;
         public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
