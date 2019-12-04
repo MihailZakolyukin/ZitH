@@ -670,142 +670,115 @@ namespace ZitH
             if (NastyaTurn) p = NastyaPosition;
             if (SashaTurn) p = SashaPosition;
 
-            if (zombies < 17) //Zombies
-            {
-                if (HumPos[p] == position[zombies])
-                {
-                    if (!ZombieFlag)
-                    {
-                        spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        ZombieFlag = true;
-                    }
-                }else ZombieFlag = false;
-                zombies++;
-            }
-            else zombies = 0;
+                if (HumPos[p] == position[0]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (dogs < 23) //Dogs
-                {
-                    if (HumPos[p] == position[dogs])
-                    {
-                    if (!DogFlag)
-                    {
-                        spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        DogFlag = true;
-                    }
-                    }else DogFlag = true;
-                    dogs++;
-                } else dogs = 17;
+                if (HumPos[p] == position[1]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (spiders < 28) //Spiders
-                {
-                if (HumPos[p] == position[spiders])
-                {
-                    if (!Spiderflag)
-                    {
-                        spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        Spiderflag = true;
-                    }
-                }
-                else Spiderflag = false;
-                    spiders++;
-                }
-                else spiders = 23;
+                if (HumPos[p] == position[2]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[28]) //Boss
-                {
-                    spriteBatch.Draw(BossHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[3]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (grenade < 34)
-                {
-                if (HumPos[p] == position[grenade])
-                {
-                    if (!GrenadeFlag)
-                    {
-                        spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        GrenadeFlag = true;
-                    }
-                }
-                else GrenadeFlag = false;
-                    grenade++;
-                }
-                else grenade = 29;
+                if (HumPos[p] == position[4]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[34])
-                {
-                    spriteBatch.Draw(AkHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[5]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[35])
-                {
-                    spriteBatch.Draw(AxeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[6]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[36])
-                {
-                    spriteBatch.Draw(CrowbowHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[7]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[37])
-                {
-                    spriteBatch.Draw(GasHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[8]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[38])
-                {
-                    spriteBatch.Draw(KeyHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[9]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[39])
-                {
-                    spriteBatch.Draw(KnifeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[10]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[40])
-                {
-                    spriteBatch.Draw(PistolHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[11]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[41])
-                {
-                    spriteBatch.Draw(RpgHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[12]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[42])
-                {
-                    spriteBatch.Draw(ShotgunHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-            }
+                if (HumPos[p] == position[13]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (medkit < 50)
-                {
-                    if (HumPos[p] == position[medkit])
-                    {
-                    if (!MedkitFlag)
-                    {
-                        spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        MedkitFlag = true;
-                    }  
-                }
-                else MedkitFlag = false;
-                medkit++;
-                }
-                else medkit = 43;
+                if (HumPos[p] == position[14]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if(wood < 54)
-                {
-                if (HumPos[p] == position[wood])
-                {
-                    if (!WoodFlag)
-                    {
-                        spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-                        WoodFlag = true;
-                    }
-                }
-                else WoodFlag = false;
-                    wood++;
-                }
-                else wood = 50;
+                if (HumPos[p] == position[15]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[16]) spriteBatch.Draw(ZombieHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[17]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[18]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[19]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[20]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[21]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[22]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[23]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[24]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[25]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[26]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[27]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[28]) spriteBatch.Draw(BossHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[29]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[30]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[31]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[32]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[33]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[34])spriteBatch.Draw(AkHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[35])spriteBatch.Draw(AxeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[36])spriteBatch.Draw(CrowbowHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[37])spriteBatch.Draw(GasHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[38])spriteBatch.Draw(KeyHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[39])spriteBatch.Draw(KnifeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[40]) spriteBatch.Draw(PistolHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[41])spriteBatch.Draw(RpgHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[42])spriteBatch.Draw(ShotgunHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[43]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[44]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[45]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[46]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[47]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[48]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[49]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[50]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[51]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[52]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[53]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
+                if (HumPos[p] == position[54]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
         }
     }
 }
