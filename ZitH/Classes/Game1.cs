@@ -59,6 +59,24 @@ namespace ZitH
         public static int NastyaPosition;
         public static int SashaPosition;
 
+        public static int BorisGrenades;
+        public static int MaximGrenades;
+        public static int NadyaGrenades;
+        public static int NastyaGrenades;
+        public static int SashaGrenades;
+
+        public static int BorisMedkits;
+        public static int MaximMedkits;
+        public static int NadyaMedkits;
+        public static int NastyaMedkits;
+        public static int SashaMedkits;
+
+        public static int BorisWoods;
+        public static int MaximWoods;
+        public static int NadyaWoods;
+        public static int NastyaWoods;
+        public static int SashaWoods;
+
         private SpriteFont font;
 
         private Texture2D play, settings, exit, back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
@@ -727,57 +745,179 @@ namespace ZitH
 
                 if (HumPos[p] == position[28]) spriteBatch.Draw(BossHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
-                if (HumPos[p] == position[29]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[29])
+                {
+                    spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    GrenadesCounter();
+                }
 
-                if (HumPos[p] == position[30]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[30])
+                {
+                    spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    GrenadesCounter();
+                }
 
-                if (HumPos[p] == position[31]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[31])
+                {
+                    spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    GrenadesCounter();
+                }
 
-                if (HumPos[p] == position[32]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[32])
+                {
+                    spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    GrenadesCounter();
+                }
 
-                if (HumPos[p] == position[33]) spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[33])
+                {
+                    spriteBatch.Draw(GrenadeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    GrenadesCounter();
+                }
 
-                if (HumPos[p] == position[34])spriteBatch.Draw(AkHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[34])
+                {
+                    spriteBatch.Draw(AkHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[35])spriteBatch.Draw(AxeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[35])
+                {
+                    spriteBatch.Draw(AxeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[36])spriteBatch.Draw(CrowbowHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[36])
+                {
+                    spriteBatch.Draw(CrowbowHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[37])spriteBatch.Draw(GasHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[37])
+                {
+                    spriteBatch.Draw(GasHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[38])spriteBatch.Draw(KeyHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[38])
+                {
+                    spriteBatch.Draw(KeyHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[39])spriteBatch.Draw(KnifeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[39])
+                {
+                    spriteBatch.Draw(KnifeHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[40]) spriteBatch.Draw(PistolHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[40])
+                {
+                    spriteBatch.Draw(PistolHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[41])spriteBatch.Draw(RpgHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[41])
+                {
+                    spriteBatch.Draw(RpgHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
 
-                if (HumPos[p] == position[42])spriteBatch.Draw(ShotgunHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                if (HumPos[p] == position[42])
+                {
+                    spriteBatch.Draw(ShotgunHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                }
+                                              
+                if (HumPos[p] == position[43])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[44])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[45])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[46])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[47])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[48])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[49])
+                {
+                    spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    MedkitsCounter();
+                }
+                                              
+                if (HumPos[p] == position[50])
+                {
+                    spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    WoodsCounter();
+                }
+                                              
+                if (HumPos[p] == position[51])
+                {
+                    spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    WoodsCounter();
+                }
+                                              
+                if (HumPos[p] == position[52])
+                {
+                    spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    WoodsCounter();
+                }
+                                              
+                if (HumPos[p] == position[53])
+                {
+                    spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    WoodsCounter();
+                }
+                                              
+                if (HumPos[p] == position[54])
+                {
+                    spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+                    WoodsCounter();
+                }
+        }
 
-                if (HumPos[p] == position[43]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+        public void GrenadesCounter()
+        {
+            if (BorisTurn) BorisGrenades++;
+            if (MaximTurn) MaximGrenades++;
+            if (NadyaTurn) NadyaGrenades++;
+            if (NastyaTurn) NastyaGrenades++;
+            if (SashaTurn) SashaGrenades++;
+        }
 
-                if (HumPos[p] == position[44]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+        public void MedkitsCounter()
+        {
+            if (BorisTurn) BorisMedkits++;
+            if (MaximTurn) MaximMedkits++;
+            if (NadyaTurn) NadyaMedkits++;
+            if (NastyaTurn) NastyaMedkits++;
+            if (SashaTurn) SashaMedkits++;
+        }
 
-                if (HumPos[p] == position[45]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[46]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[47]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[48]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[49]) spriteBatch.Draw(MedkitHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[50]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[51]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[52]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[53]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
-                if (HumPos[p] == position[54]) spriteBatch.Draw(WoodHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+        public void WoodsCounter()
+        {
+            if (BorisTurn) BorisWoods++;
+            if (MaximTurn) MaximWoods++;
+            if (NadyaTurn) NadyaWoods++;
+            if (NastyaTurn) NastyaWoods++;
+            if (SashaTurn) SashaWoods++;
         }
     }
 }
