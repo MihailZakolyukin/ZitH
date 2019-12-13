@@ -35,6 +35,7 @@ namespace ZitH
 
         int b = 0;
         public static bool BorisFlag = false, MaximFlag = false, NadyaFlag = false, NastyaFlag = false, SashaFlag = false;
+        public static bool BorisMenuFlag = false, MaximMenuFlag = false, NadyaMenuFlag = false, NastyaMenuFlag = false, SashaMenuFlag = false;
 
         public static bool isBorisSelected = false;
         public static bool isMaximSelected = false;
@@ -77,6 +78,12 @@ namespace ZitH
         public static int NastyaWoods;
         public static int SashaWoods;
 
+        public static int BorisMenuPanel = 10 * BorisPosition;
+        public static int MaximMenuPanel = 10 * MaximPosition;
+        public static int NadyaMenuPanel = 10 * NadyaPosition;
+        public static int NastyaMenuPanel = 10 * NastyaPosition;
+        public static int SashaMenuPanel = 10 * SashaPosition;
+
         private SpriteFont font;
 
         private Texture2D play, settings, exit, back, ok, exittomm, exitfromgame, gameStart, NextTurn, Throw, //Buttons
@@ -95,6 +102,7 @@ namespace ZitH
         private Vector2[] HumPos = new Vector2[5];
         private Vector2[] position = new Vector2[55];
         private Vector2[] HMP = new Vector2[5];
+        private Vector2[] IMP = new Vector2[50];
 
         public Game1()
         {
@@ -377,12 +385,67 @@ namespace ZitH
             HumPos[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51, 1080 / 2 + 264 - 52);
             HumPos[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52, 1080 / 2 + 264 - 52);
             HumPos[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 104, 1080 / 2 + 264);
+
             HMP[0] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 700);
             HMP[1] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 600);
             HMP[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 500);
             HMP[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 400);
             HMP[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 - 650, 1080 / 2 + 264 - 300);
 
+            IMP[0] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 1 - 650, 1080 / 2 + 264 - 700);
+            IMP[1] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 2 - 650, 1080 / 2 + 264 - 700);
+            IMP[2] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 3 - 650, 1080 / 2 + 264 - 700);
+            IMP[3] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 4 - 650, 1080 / 2 + 264 - 700);
+            IMP[4] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 5 - 650, 1080 / 2 + 264 - 700);
+            IMP[5] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 6 - 650, 1080 / 2 + 264 - 700);
+            IMP[6] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 7 - 650, 1080 / 2 + 264 - 700);
+            IMP[7] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 8 - 650, 1080 / 2 + 264 - 700);
+            IMP[8] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 9 - 650, 1080 / 2 + 264 - 700);
+            IMP[9] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 10 - 650, 1080 / 2 + 264 - 700);
+
+            IMP[10] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 1 - 650, 1080 / 2 + 264 - 600);
+            IMP[11] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 2 - 650, 1080 / 2 + 264 - 600);
+            IMP[12] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 3 - 650, 1080 / 2 + 264 - 600);
+            IMP[13] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 4 - 650, 1080 / 2 + 264 - 600);
+            IMP[14] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 5 - 650, 1080 / 2 + 264 - 600);
+            IMP[15] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 6 - 650, 1080 / 2 + 264 - 600);
+            IMP[16] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 7 - 650, 1080 / 2 + 264 - 600);
+            IMP[17] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 8 - 650, 1080 / 2 + 264 - 600);
+            IMP[18] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 9 - 650, 1080 / 2 + 264 - 600);
+            IMP[19] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 10 - 650, 1080 / 2 + 264 - 600);
+
+            IMP[21] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 1 - 650, 1080 / 2 + 264 - 500);
+            IMP[22] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 2 - 650, 1080 / 2 + 264 - 500);
+            IMP[23] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 3 - 650, 1080 / 2 + 264 - 500);
+            IMP[24] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 4 - 650, 1080 / 2 + 264 - 500);
+            IMP[25] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 5 - 650, 1080 / 2 + 264 - 500);
+            IMP[26] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 6 - 650, 1080 / 2 + 264 - 500);
+            IMP[27] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 7 - 650, 1080 / 2 + 264 - 500);
+            IMP[28] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 8 - 650, 1080 / 2 + 264 - 500);
+            IMP[20] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 9 - 650, 1080 / 2 + 264 - 500);
+            IMP[29] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 10 - 650, 1080 / 2 + 264 - 500);
+
+            IMP[30] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 1 - 650, 1080 / 2 + 264 - 400);
+            IMP[31] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 2 - 650, 1080 / 2 + 264 - 400);
+            IMP[32] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 3 - 650, 1080 / 2 + 264 - 400);
+            IMP[33] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 4 - 650, 1080 / 2 + 264 - 400);
+            IMP[34] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 5 - 650, 1080 / 2 + 264 - 400);
+            IMP[35] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 6 - 650, 1080 / 2 + 264 - 400);
+            IMP[36] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 7 - 650, 1080 / 2 + 264 - 400);
+            IMP[37] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 8 - 650, 1080 / 2 + 264 - 400);
+            IMP[38] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 9 - 650, 1080 / 2 + 264 - 400);
+            IMP[39] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 10 - 650, 1080 / 2 + 264 - 400);
+
+            IMP[40] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 1 - 650, 1080 / 2 + 264 - 300);
+            IMP[41] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 2 - 650, 1080 / 2 + 264 - 300);
+            IMP[42] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 3 - 650, 1080 / 2 + 264 - 300);
+            IMP[43] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 4 - 650, 1080 / 2 + 264 - 300);
+            IMP[44] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 5 - 650, 1080 / 2 + 264 - 300);
+            IMP[45] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 6 - 650, 1080 / 2 + 264 - 300);
+            IMP[46] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 7 - 650, 1080 / 2 + 264 - 300);
+            IMP[47] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 8 - 650, 1080 / 2 + 264 - 300);
+            IMP[48] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 9 - 650, 1080 / 2 + 264 - 300);
+            IMP[49] = new Vector2(1920 / 2 - 795 / 2 + 35 + 51 + 52 * 10 - 650, 1080 / 2 + 264 - 300);   
         }
 
         void DrawMenu() //Drawing Menu
@@ -734,7 +797,7 @@ namespace ZitH
                 if (HumPos[p] == position[22]) spriteBatch.Draw(DogHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
                 if (HumPos[p] == position[23]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
-
+    
                 if (HumPos[p] == position[24]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
                 if (HumPos[p] == position[25]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
@@ -744,6 +807,7 @@ namespace ZitH
                 if (HumPos[p] == position[27]) spriteBatch.Draw(SpiderHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
 
                 if (HumPos[p] == position[28]) spriteBatch.Draw(BossHD, new Vector2(1920 / 2 - 100, 1080 / 2 - 100), Color.White);
+
 
                 if (HumPos[p] == position[29])
                 {
@@ -895,8 +959,20 @@ namespace ZitH
 
         public void GrenadesCounter()
         {
-            if (BorisTurn) BorisGrenades++;
-            if (MaximTurn) MaximGrenades++;
+            if (BorisTurn)
+            {
+                if (!BorisMenuFlag)
+                {
+                    spriteBatch.Draw(Grenade, IMP[BorisMenuPanel], Color.White);
+                    BorisMenuPanel++;
+                    BorisGrenades++;
+                    BorisMenuFlag = true;
+                }
+            }
+            if (MaximTurn)
+            {
+                MaximGrenades++;
+            }
             if (NadyaTurn) NadyaGrenades++;
             if (NastyaTurn) NastyaGrenades++;
             if (SashaTurn) SashaGrenades++;
